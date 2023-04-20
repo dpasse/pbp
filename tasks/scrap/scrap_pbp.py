@@ -9,7 +9,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-SLEEP_TIME_IN_SECONDS = 20
+SLEEP_TIME_IN_SECONDS = 30
 
 def find(obj, key):
     if key in obj:
@@ -55,6 +55,10 @@ def scrap_pbp(year: str, schedules: List[Dict[str, Any]]) -> None:
                         json.loads(text_blob[23:-1]),
                         'allPlys'
                     )
+
+                    if drives is None:
+                        print(f'"{game_id}" - could not find any drives, canceled?')
+                        continue
 
                     for drive in drives:
                         plays = drive['plays'] if 'plays' in drive else []
