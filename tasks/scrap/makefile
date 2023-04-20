@@ -1,2 +1,5 @@
-run:
-	python get.py
+scrap-schedules:
+	python scrap_schedules.py
+
+scrap-pbp:
+	python scrap_pbp.py
