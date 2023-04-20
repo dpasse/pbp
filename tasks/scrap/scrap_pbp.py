@@ -9,7 +9,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-SLEEP_TIME_IN_SECONDS = 5
+SLEEP_TIME_IN_SECONDS = 20
 
 def find(obj, key):
     if key in obj:
@@ -67,6 +67,7 @@ def scrap_pbp(year: str, schedules: List[Dict[str, Any]]) -> None:
                 )
 
             time.sleep(SLEEP_TIME_IN_SECONDS)
+
 
 if __name__ == '__main__':
     year = 2022

@@ -11,7 +11,6 @@ from bs4 import BeautifulSoup
 
 SLEEP_TIME_IN_SECONDS = 5
 
-
 def scrap_schedules(year: int, number_of_weeks = 18) -> None:
     print('Options:')
     print('year:', year)
@@ -26,22 +25,17 @@ def scrap_schedules(year: int, number_of_weeks = 18) -> None:
 
         bs = BeautifulSoup(response.content, 'html.parser')
 
-        games = []
+        obj = { 'week': week, 'games': [] }
         for link in bs.find_all('a', class_ = 'AnchorLink'):
             match = re.search(r'nfl/game\?gameId=(\d+)$', link.attrs['href'])
             if match:
-                games.append(match.group(1))
+                obj['games'].append(match.group(1))
 
-        obj = {
-            'week': week,
-            'games': games,
-        }
+        print('Week', obj['week'])
+        print('Games:', len(obj['games']))
+        print()
 
         schedules.append(obj)
-
-        print('Week', week)
-        print('Games:', len(games))
-        print()
 
         time.sleep(SLEEP_TIME_IN_SECONDS)
 
