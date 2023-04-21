@@ -1,8 +1,13 @@
-import re
+from typing import List, Tuple
 import os
-import json
 import random
 
+
+def partition(data: List[str], pivot: int) -> Tuple[List[str], List[str]]:
+    return (
+        data[:pivot],
+        data[pivot:]
+    )
 
 def split_centralized_data(percentage: float) -> None:
     directory = os.path.join('..', 'data', '3')
@@ -14,20 +19,17 @@ def split_centralized_data(percentage: float) -> None:
             if len(row.strip()) > 0
         ]
 
-    random.shuffle(source_data)
+    for _ in range(3):
+        random.shuffle(source_data)
 
-    i = 0
     pivot = int(len(source_data) * percentage)
+    development_set, holdout_set = partition(source_data, pivot)
 
     with open(os.path.join(directory, 'development.txt'), 'w') as instances_file:
-        while i <= pivot:
-            instances_file.write(source_data[i])
-
-            i += 1
+        instances_file.write(''.join(development_set))
             
     with open(os.path.join(directory, 'holdouts.txt'), 'w') as holdouts_file:
-        for row in source_data[i:]:
-            holdouts_file.write(row)
+        holdouts_file.write(''.join(holdout_set))
 
 
 if __name__ == '__main__':
