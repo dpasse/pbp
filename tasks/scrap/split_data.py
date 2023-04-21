@@ -35,4 +35,3 @@ def split_centralized_data(percentage: float) -> None:
 if __name__ == '__main__':
     percentage = .05
     split_centralized_data(percentage)
-
