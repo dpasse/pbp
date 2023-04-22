@@ -1,2 +1,2 @@
-get:
-	python get.py
+annotate-data:
+	python annotate_data.py

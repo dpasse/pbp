@@ -25,7 +25,7 @@ def split_centralized_data(percentage: float) -> None:
     pivot = int(len(source_data) * percentage)
     development_set, holdout_set = partition(source_data, pivot)
 
-    with open(os.path.join(directory, 'development.txt'), 'w') as instances_file:
+    with open(os.path.join(directory, 'dev.txt'), 'w') as instances_file:
         instances_file.write(''.join(development_set))
             
     with open(os.path.join(directory, 'holdouts.txt'), 'w') as holdouts_file:
