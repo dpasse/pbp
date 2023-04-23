@@ -20,7 +20,6 @@ def save_data(dataset: List[str], file_path: str) -> None:
     with open(file_path, 'w') as dev:
         dev.write('\n'.join(dataset))
 
-
 def annotate(in_file: str, out_file: str):
     dataset = get_data(
         os.path.join('..', 'data', '3', in_file)
@@ -48,7 +47,8 @@ def annotate(in_file: str, out_file: str):
     for key, value in extracted_text_by_label.items():
         extracted_text_by_label[key] = list(sorted(value))
 
-    with open(os.path.join('..', 'data', '4', 'dev.stats.json'), 'w') as dev_stats:
+    stats_path = os.path.join('..', 'data', '4', 'dev.stats.json')
+    with open(stats_path, 'w') as dev_stats:
         dev_stats.write(json.dumps(extracted_text_by_label, indent=2))
 
 

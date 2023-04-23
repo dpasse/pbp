@@ -42,7 +42,7 @@ entitiy_patterns: List[RegExLabel] = [
         regexes=[
             RegEx(
                 expressions=[
-                    r'\b(WR|TE|RB|QB|)\b'
+                    r'\b(WR|TE|RB|QB)\b'
                 ],
             ),
         ],
