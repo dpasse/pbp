@@ -128,8 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-tasks/data/1/*.json
-tasks/data/2/*.txt
-tasks/data/3/*.txt
-tasks/data/3/*.json
-tasks/data/4/*.txt
+tasks/data/*/*.json
+tasks/data/*/*.txt

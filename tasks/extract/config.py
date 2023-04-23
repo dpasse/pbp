@@ -21,21 +21,11 @@ entitiy_patterns: List[RegExLabel] = [
         ]
     ),
     RegExLabel(
-        label='EVENT',
-        regexes=[
-            RegEx(
-                expressions=[
-                    r'\b(kicks|kneels|pass|run|sacked|scrambles)\b',
-                ],
-                flags=re.IGNORECASE
-            ),
-        ]
-    ),
-    RegExLabel(
         label='PLAYER',
         regexes=[
             RegEx(expressions=[
                 r'\b[A-Z]\.[A-Z][A-Za-z]+?\b',
+                r'\b[A-Z]\.[A-Z][A-Za-z][.-]\s?[A-Z][a-z]+?\b',
             ]),
         ]
     ),
@@ -43,15 +33,38 @@ entitiy_patterns: List[RegExLabel] = [
         label='DISTANCE',
         regexes=[
             RegEx(expressions=[
-                r'(?<=\s)(-?\d+\s+yards)(?=\b)'
+                r'(?<=\s)(-?\d+\s+yards?)(?=\b)'
             ]),
         ]
+    ),
+    RegExLabel(
+        label='POSITION',
+        regexes=[
+            RegEx(
+                expressions=[
+                    r'\b(WR|TE|RB|QB|)\b'
+                ],
+            ),
+        ],
+    ),
+    RegExLabel(
+        label='TEAM',
+        regexes=[
+            RegEx(
+                expressions=[
+                    r'\b[A-Z]{2,3}\b'
+                ],
+                skip_if=[
+                    r'\b(II|AJ|TWO|YAC)\b'
+                ]
+            ),
+        ],
     ),
     RegExLabel(
         label='SPOT',
         regexes=[
             RegEx(expressions=[
-                r'(?<=\s)[A-Z]{2,}\s+\d{1,3}(?=\s)',
+                r'\d{1,3}(?=\b)',
                 r'(?<=\sto\s)\d{1,3}(?=\s)',
             ])
         ]
@@ -66,6 +79,15 @@ relation_patterns = [
                 r'(\s-\s)',
             ],
             e1='PERIOD'
+        ) \
+        .build(),
+    RegExRelationLabelBuilder('is_at') \
+        .add_e1_to_e2(
+            e1='SPOT',
+            relation_expressions=[
+                r'\s',
+            ],
+            e2='TEAM',
         ) \
         .build()
 ]
