@@ -64,8 +64,8 @@ entitiy_patterns: List[RegExLabel] = [
         label='SPOT',
         regexes=[
             RegEx(expressions=[
-                r'\d{1,3}(?=\b)',
-                r'(?<=\sto\s)\d{1,3}(?=\s)',
+                r'-?\d{1,3}(?=\b)',
+                r'(?<=\sto\s)-?\d{1,3}(?=\s)',
             ])
         ]
     )
@@ -81,13 +81,13 @@ relation_patterns = [
             e1='PERIOD'
         ) \
         .build(),
-    RegExRelationLabelBuilder('is_at') \
+    RegExRelationLabelBuilder('spot_of_ball') \
         .add_e1_to_e2(
-            e1='SPOT',
+            e1='TEAM',
             relation_expressions=[
-                r'\s',
+                r'\s+',
             ],
-            e2='TEAM',
+            e2='SPOT',
         ) \
         .build()
 ]
