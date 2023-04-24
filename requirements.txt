@@ -10,8 +10,8 @@ constantly==15.1.0
 cryptography==40.0.2
 cssselect==1.2.0
 dill==0.3.6
-extr==0.0.13
-extr-ds==0.0.9
+extr==0.0.15
+extr-ds==0.0.11
 filelock==3.12.0
 hyperlink==21.0.0
 idna==3.4

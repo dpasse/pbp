@@ -1,6 +1,7 @@
 from typing import List
-import re
-from extr import RegEx, RegExLabel, RegExRelationLabelBuilder
+
+from extr.regexes import SlimRegEx, RegEx, RegExLabel
+from extr.relations import RegExRelationLabelBuilder
 
 
 entitiy_patterns: List[RegExLabel] = [
@@ -55,7 +56,7 @@ entitiy_patterns: List[RegExLabel] = [
                     r'\b[A-Z]{2,3}\b'
                 ],
                 skip_if=[
-                    r'\b(II|AJ|TWO|YAC)\b'
+                    SlimRegEx([r'\b(II|AJ|TWO|YAC)\b'])
                 ]
             ),
         ],
