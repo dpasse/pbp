@@ -19,6 +19,8 @@ def split_centralized_data(percentage: float) -> None:
             if len(row.strip()) > 0
         ]
 
+    random.seed(72)
+
     for _ in range(3):
         random.shuffle(source_data)
 
