@@ -26,7 +26,14 @@ entitiy_patterns: List[RegExLabel] = [
         regexes=[
             RegEx(expressions=[
                 r'\b[A-Z][a-z]*\.[A-Z][A-Za-z]+?\b',
-                r'\b[A-Z][a-z]*\.[A-Z][A-Za-z]*[.-]\s?[A-Z][a-z]+?\b',
+                r'\b[A-Z][a-z]*\.[A-Z][A-Za-z]*[.-][A-Z][a-z]+?\b',
+                r'\b[A-Z][a-z]*\.[A-Z][A-Za-z]* [A-Z][a-z]+?\b',
+                r'\b[A-Z][a-z]+ [A-Z][a-z]+(?= Pass From)',
+                r'(?<=Pass From )[A-Z][a-z]+ [A-Z][a-z]+(?= for\b)',
+                r'\b[A-Z][a-z]+ [A-Z][a-z]+(?= -?\d+ Yd Rush)',
+
+                ## really specific
+                r'\b[AE]\.St\. Brown\b',
             ]),
         ]
     ),
@@ -34,7 +41,7 @@ entitiy_patterns: List[RegExLabel] = [
         label='DISTANCE',
         regexes=[
             RegEx(expressions=[
-                r'(?<=\s)(-?\d+\s+yards?)(?=\b)'
+                r'(?<=\s)-?\d+\s+(yards?|Yds?)(?=\b)'
             ]),
         ]
     ),

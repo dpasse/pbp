@@ -9,6 +9,8 @@ from features import sent2features, sent2labels
 from utils import make_crf_dataset
 from filesystem import get_data
 
+from extr_ds.validators import check_for_differences
+
 
 def annotate(in_file: str):
     train_sents = make_crf_dataset(
@@ -29,15 +31,25 @@ def annotate(in_file: str):
     
     crf.fit(X_train, y_train)
 
+
     labels = list(crf.classes_)
     labels.remove('O')
-    labels
 
     y_pred = crf.predict(X_train)
 
     print(
         metrics.flat_f1_score(y_train, y_pred, average='weighted', labels=labels)
     )
+
+    for i, outcomes in enumerate(zip(y_pred, y_train)):
+        differences = check_for_differences(outcomes[1], outcomes[0])
+        if differences.has_diffs:
+            print(i)
+            for diff in differences.diffs_between_labels:
+                print(train_sents[i][diff.index])
+                print(diff.diff_type)
+                print()
+
 
 
 if __name__ == '__main__':
