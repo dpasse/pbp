@@ -3,6 +3,7 @@ import os
 import json
 
 from utils import transform_document
+from filesystem import get_data
 from config import entitiy_patterns, relation_patterns
 from extr.entities import EntityExtractor, LabelOnlyEntityAnnotator, EntityAnnotator
 from extr.relations import RelationExtractor, RelationAnnotator
@@ -13,12 +14,6 @@ entity_extractor = EntityExtractor(entitiy_patterns)
 relations_extractor = RelationExtractor(relation_patterns)
 relation_annotator = RelationAnnotator()
 
-def get_data(file_path: str) -> List[str]:
-    dataset = []
-    with open(file_path, 'r') as dev:
-        dataset = dev.read().split('\n')
-
-    return dataset
 
 def save_data(dataset: List[str], file_path: str) -> None:
     with open(file_path, 'w') as dev:
