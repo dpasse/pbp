@@ -1,6 +1,10 @@
 from typing import List
 import os
 
+import sklearn_crfsuite
+from sklearn_crfsuite import metrics
+
+from features import sent2features, sent2labels
 from utils import transform_document
 from nltk.tokenize import word_tokenize
 from nltk import pos_tag
@@ -16,22 +20,16 @@ def sentence_tokenizer(text: str) -> List[str]:
 entity_extractor = EntityExtractor(entitiy_patterns)
 labeler = IOB(sentence_tokenizer, entity_extractor)
 
-def get_data(file_path: str) -> List[str]:
-    dataset = []
-    with open(file_path, 'r') as dev:
-        dataset = dev.read().split('\n')
+def make_dataset(file_path: str):
+    def get_data(file_path: str) -> List[str]:
+        dataset = []
+        with open(file_path, 'r') as dev:
+            dataset = dev.read().split('\n')
 
-    return dataset
-
-def annotate(in_file: str):
-    dataset = get_data(
-        os.path.join('..', 'data', '3', in_file + '.txt')
-    )
-
+        return dataset
+    
     train_set = []
-    for i, row in enumerate(dataset):
-
-        instances = []
+    for i, row in enumerate(get_data(file_path)):
         text = transform_document(row)
 
         try:
@@ -48,14 +46,37 @@ def annotate(in_file: str):
 
             raise
 
-        instances.append(
-            list(zip(tokens, pos, labels))
-        )
+        train_set.append(list(zip(tokens, pos, labels)))
 
-        train_set.append(instances)
+    return train_set
 
-    print(train_set[0])
-        
+def annotate(in_file: str):
+    train_sents = make_dataset(
+        os.path.join('..', 'data', '3', in_file + '.txt')
+    )
+
+    X_train = [sent2features(s) for s in train_sents]
+    y_train = [sent2labels(s) for s in train_sents]
+
+    crf = sklearn_crfsuite.CRF(
+        algorithm='lbfgs',
+        c1=0.1,
+        c2=0.1,
+        max_iterations=100,
+        all_possible_transitions=True
+    )
+    
+    crf.fit(X_train, y_train)
+
+    labels = list(crf.classes_)
+    labels.remove('O')
+    labels
+
+    y_pred = crf.predict(X_train)
+    print(
+        metrics.flat_f1_score(y_train, y_pred, average='weighted', labels=labels)
+    )
+
 
 if __name__ == '__main__':
     annotate('dev')
