@@ -63,6 +63,18 @@ cd tasks\extract
 make ner
 ```
 
-## 5. Compare Models - CRF / Rule-based
+**<i> compare crf vs rule-based models</i>**
 
+```python
+from extr_ds.validators import check_for_differences
+
+for i, outcomes in enumerate(zip(y_pred, y_train)):
+    differences = check_for_differences(outcomes[1], outcomes[0])
+    if differences.has_diffs:
+        print(i)
+        for diff in differences.diffs_between_labels:
+            print(train_sents[i][diff.index])
+            print(diff.diff_type)
+            print()
+```
 
