@@ -25,8 +25,8 @@ entitiy_patterns: List[RegExLabel] = [
         label='PLAYER',
         regexes=[
             RegEx(expressions=[
-                r'\b[A-Z]\.[A-Z][A-Za-z]+?\b',
-                r'\b[A-Z]\.[A-Z][A-Za-z][.-]\s?[A-Z][a-z]+?\b',
+                r'\b[A-Z][a-z]*\.[A-Z][A-Za-z]+?\b',
+                r'\b[A-Z][a-z]*\.[A-Z][A-Za-z]*[.-]\s?[A-Z][a-z]+?\b',
             ]),
         ]
     ),

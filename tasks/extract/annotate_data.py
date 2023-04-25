@@ -2,6 +2,7 @@ from typing import List, Set, Dict
 import os
 import json
 
+from utils import transform_document
 from config import entitiy_patterns, relation_patterns
 from extr.entities import EntityExtractor, LabelOnlyEntityAnnotator, EntityAnnotator
 from extr.relations import RelationExtractor, RelationAnnotator
@@ -32,8 +33,10 @@ def annotate(in_file: str, entities_out_file: str, relations_out_file: str):
     relation_annotations: List[str] = []
     extracted_text_by_label: Dict[str, Set[str]] = {}
     for row in dataset:
-        entities = entity_extractor.get_entities(row)
-        annotation_result = annotator.annotate(row, entities)
+        text = transform_document(row)
+
+        entities = entity_extractor.get_entities(text)
+        annotation_result = annotator.annotate(text, entities)
         text_annotations.append(
             annotation_result.annotated_text
         )
@@ -46,13 +49,13 @@ def annotate(in_file: str, entities_out_file: str, relations_out_file: str):
 
         
         relations = relations_extractor.extract(
-            EntityAnnotator().annotate(row, entities)
+            EntityAnnotator().annotate(text, entities)
         )
 
         relation_annotations.extend(
             list(
                 map(
-                    lambda rel: f'{rel.label} | {relation_annotator.annotate(row, rel)}',
+                    lambda rel: f'{rel.label} | {relation_annotator.annotate(text, rel)}',
                     relations
                 )
             )
