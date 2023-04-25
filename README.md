@@ -3,7 +3,7 @@
 > Named Entity and Relation Extraction models for NFL play-by-play snippets
 
 
-## Scrap Data
+## 1. Scrap Data
 
 > scrap game ids and play-by-play text from ESPN for 2022 NFL regular season.
 
@@ -25,7 +25,7 @@ make scrap-pbp
 
 **<i>output files found in "tasks/data/2/"</i>**
 
-## Centralize and Split Data
+## 2. Centralize and Split Data
 
 > create a main source file and split into dev / holdout datasets
 
@@ -39,7 +39,7 @@ make split-data
 
 **<i>output files found in "tasks/data/3/"</i>**
 
-## Programmatically Label the Dev Dataset
+## 3. Programmatically Label the Dev Dataset
 
 > run labeling rules - [config](https://github.com/dpasse/pbp/blob/main/tasks/extract/config.py)
 
@@ -51,3 +51,18 @@ make annotate-data
 ```
 
 **<i>output files found in "tasks/data/4/"</i>**
+
+## 4. Build CRF Model from Programmatically Labeled Dev Dataset
+
+> run labeling rules - [config](https://github.com/dpasse/pbp/blob/main/tasks/extract/config.py)
+
+**<i>from the project root</i>**
+
+```cmd
+cd tasks\extract
+make ner
+```
+
+## 5. Compare Models - CRF / Rule-based
+
+
