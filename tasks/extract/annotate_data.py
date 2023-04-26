@@ -1,16 +1,17 @@
 from typing import List, Set, Dict
 import os
+import re
 import json
 
 from utils import transform_document
 from filesystem import get_data
-from config import entitiy_patterns, relation_patterns
-from extr.entities import EntityExtractor, LabelOnlyEntityAnnotator, EntityAnnotator
+from config import entitiy_patterns, relation_patterns, kb
+from extr.entities import create_entity_extractor, LabelOnlyEntityAnnotator, EntityAnnotator
 from extr.relations import RelationExtractor, RelationAnnotator
 
 
 annotator = LabelOnlyEntityAnnotator()
-entity_extractor = EntityExtractor(entitiy_patterns)
+entity_extractor = create_entity_extractor(entitiy_patterns, kb)
 relations_extractor = RelationExtractor(relation_patterns)
 relation_annotator = RelationAnnotator()
 
@@ -59,6 +60,11 @@ def annotate(in_file: str, entities_out_file: str, relations_out_file: str):
     save_data(
         text_annotations,
         os.path.join('..', 'data', '4', entities_out_file + '.txt')
+    )
+
+    save_data(
+        [ re.sub(' +', ' ', re.sub(r'<[A-Z]+>.+?</[A-Z]+>', ' ', row)) for row in text_annotations ],
+        os.path.join('..', 'data', '4', entities_out_file + '-redacted.txt')
     )
 
     save_data(

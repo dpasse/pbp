@@ -4,7 +4,7 @@ import re
 from nltk import pos_tag
 from nltk.tokenize import word_tokenize
 
-from extr.entities import EntityExtractor
+from extr.entities import create_entity_extractor
 from extr_ds.labelers import IOB
 
 
@@ -22,10 +22,30 @@ def transform_document(document: str) -> str:
         text
     )
 
+    text = re.sub(
+        r'\b(\d+)(-)([A-Z]\.)',
+        r'\1 \2 \3',
+        text
+    )
+
+    text = re.sub(
+        r'\b(\d+)([A-Z]\.)',
+        r'\1 \2',
+        text
+    )
+
+    text = re.sub(
+        r'(injured during the play\.)',
+        r'\1 ',
+        text
+    )
+
+    text = re.sub(r' +', ' ', text)
+
     return text
 
-def make_crf_dataset(dataset: List[str], entitiy_patterns):
-    entity_extractor = EntityExtractor(entitiy_patterns)
+def make_crf_dataset(dataset: List[str], entitiy_patterns, kb=None):
+    entity_extractor = create_entity_extractor(entitiy_patterns, kb)
     labeler = IOB(sentence_tokenizer, entity_extractor)
     
     train_set = []

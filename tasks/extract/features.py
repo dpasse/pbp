@@ -5,6 +5,9 @@ def word2features(sent, i):
     features = {
         'bias': 1.0,
         'word.lower()': word.lower(),
+        'word.capital()': word[0].isupper(),
+        'word[:3]': word[:3],
+        'word[:2]': word[:2],
         'word[-3:]': word[-3:],
         'word[-2:]': word[-2:],
         'word.isupper()': word.isupper(),
@@ -12,6 +15,7 @@ def word2features(sent, i):
         'word.isdigit()': word.isdigit(),
         'postag': postag,
         'postag[:2]': postag[:2],
+        'has_period': '.' in word
     }
     if i > 0:
         word1 = sent[i-1][0]
@@ -22,6 +26,7 @@ def word2features(sent, i):
             '-1:word.isupper()': word1.isupper(),
             '-1:postag': postag1,
             '-1:postag[:2]': postag1[:2],
+            '-1:has_period': '.' in word1,
         })
     else:
         features['BOS'] = True

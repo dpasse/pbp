@@ -4,6 +4,78 @@ from extr.regexes import SlimRegEx, RegEx, RegExLabel
 from extr.relations import RegExRelationLabelBuilder
 
 
+kb = {
+    'TEAM': [
+        'Kansas City',
+        'Cleveland',
+        'New Orleans',
+    ],
+    'PLAYER': [
+        r'[AE]\.St\. Brown',
+        'D. McCourty',
+        'T.J. Watt',
+        'A.Van Ginkel',
+        'Kenneth Walker III',
+        'G.Van Roten',
+        'K.Van Noy',
+    ],
+    'PERIOD': [
+        '1st',
+        '2nd',
+        '3rd',
+        '4th',
+        'OT',
+    ],
+    'POSITION': [
+        'WR',
+        'RB',
+        'TE',
+        'QB'
+    ],
+    'TEAM': [
+        'ARZ',
+        'ATL',
+        'BLT',
+        'BUF',
+        'CAR',
+        'CHI',
+        'CIN',
+        'CLV',
+        'Cleveland',
+        'DAL',
+        'DEN',
+        'DET',
+        'GB',
+        'HST',
+        'IND',
+        'Indianapolis',
+        'JAX',
+        'KC',
+        'Kansas City',
+        'LA',
+        'LAC',
+        'LV',
+        'Las Vegas',
+        'MIA',
+        'MIN',
+        'Minnesota',
+        'NE',
+        'New England',
+        'NO',
+        'New Orleans',
+        'NYG',
+        'NYJ',
+        'PHI',
+        'PIT',
+        'SEA',
+        'SF',
+        'TB',
+        'TEN',
+        'WAS',
+        'Washington',
+    ]
+}
+
 entitiy_patterns: List[RegExLabel] = [
     RegExLabel(
         label='TIME',
@@ -14,26 +86,14 @@ entitiy_patterns: List[RegExLabel] = [
         ],
     ),
     RegExLabel(
-        label='PERIOD',
-        regexes=[
-            RegEx(expressions=[
-                r'\b(1st|2nd|3rd|4th|OT)\b',
-            ]),
-        ]
-    ),
-    RegExLabel(
         label='PLAYER',
         regexes=[
             RegEx(expressions=[
-                r'\b[A-Z][a-z]*\.[A-Z][A-Za-z]+?\b',
-                r'\b[A-Z][a-z]*\.[A-Z][A-Za-z]*[.-][A-Z][a-z]+?\b',
-                r'\b[A-Z][a-z]*\.[A-Z][A-Za-z]* [A-Z][a-z]+?\b',
-                r'\b[A-Z][a-z]+ [A-Z][a-z]+(?= Pass From)',
-                r'(?<=Pass From )[A-Z][a-z]+ [A-Z][a-z]+(?= for\b)',
-                r'\b[A-Z][a-z]+ [A-Z][a-z]+(?= -?\d+ Yd Rush)',
-
-                ## really specific
-                r'\b[AE]\.St\. Brown\b',
+                r'\b[A-Z][a-z]*\.[A-Z][\'A-Za-z]+\b',
+                r'\b[A-Z][a-z]*\.[A-Z][A-Za-z]*[.-][A-Z][a-z]+\b',
+                r'\b[A-Z][\'A-Za-z]+ ([A-Z][a-z]+|-)+(?= (?:[Pp]ass [Ff]rom|PAT ))',
+                r'(?<=[Pp]ass [Ff]rom )[A-Z][a-z]+ [A-Z][a-z]+(?= (?:for\b|\())',
+                r'\b[A-Z][\'A-Za-z]+ ([A-Z][a-z]+|-)+(?= -?\d+ Yd (?:[Rr]ush|(?:Interception|KO) Return|Run|[Pp]ass [Ff]rom))',
             ]),
         ]
     ),
@@ -44,29 +104,6 @@ entitiy_patterns: List[RegExLabel] = [
                 r'(?<=\s)-?\d+\s+(yards?|Yds?)(?=\b)'
             ]),
         ]
-    ),
-    RegExLabel(
-        label='POSITION',
-        regexes=[
-            RegEx(
-                expressions=[
-                    r'\b(WR|TE|RB|QB)\b'
-                ],
-            ),
-        ],
-    ),
-    RegExLabel(
-        label='TEAM',
-        regexes=[
-            RegEx(
-                expressions=[
-                    r'\b[A-Z]{2,3}\b'
-                ],
-                skip_if=[
-                    SlimRegEx([r'\b(II|AJ|TWO|YAC)\b'])
-                ]
-            ),
-        ],
     ),
     RegExLabel(
         label='SPOT',
