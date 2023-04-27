@@ -1,7 +1,7 @@
 import re
 from typing import List
 
-from extr.regexes import SlimRegEx, RegEx, RegExLabel
+from extr.regexes import RegEx, RegExLabel
 from extr.relations import RegExRelationLabelBuilder
 
 
@@ -15,6 +15,13 @@ kb = {
         'Kenneth Walker III',
         'G.Van Roten',
         'K.Van Noy',
+        'Amon-Ra St. Brown',
+        'Travis Etienne Jr.',
+        'Jeff Wilson Jr.',
+        'Velus Jones Jr.',
+        'Melvin Gordon III',
+        'Tony Fields II',
+        'L.Vander Esch'
     ],
     'PERIOD': [
         '1st',
@@ -42,7 +49,9 @@ kb = {
         'CLV',
         'Cleveland',
         'DAL',
+        'Dallas',
         'DEN',
+        'Denver',
         'DET',
         'GB',
         'Green Bay',
@@ -57,6 +66,7 @@ kb = {
         'LV',
         'Las Vegas',
         'MIA',
+        'Miami',
         'MIN',
         'Minnesota',
         'NE',
@@ -68,6 +78,7 @@ kb = {
         'NYJ',
         'New York Jets',
         'PHI',
+        'Philadelphia',
         'PIT',
         'SEA',
         'SF',
@@ -93,9 +104,10 @@ entitiy_patterns: List[RegExLabel] = [
             RegEx(expressions=[
                 r'\b[A-Z][a-z]*\.[A-Z][\'A-Za-z]+\b',
                 r'\b[A-Z][a-z]*\.[A-Z][A-Za-z]*[.-][A-Z][a-z]+\b',
-                r'\b[A-Z][\'A-Za-z]+ ([A-Z][a-z]+|-)+(?= (?:[Pp]ass [Ff]rom|PAT ))',
+                r'\b[A-Z][\'A-Za-z]+ ([A-Z][a-z]+|-)+(?= (?:[Pp]ass [Ff]rom|PAT |has been ruled out))',
                 r'(?<=[Pp]ass [Ff]rom )[A-Z][a-z]+ [A-Z][a-z]+(?= (?:for\b|\())',
-                r'\b[A-Z][\'A-Za-z]+ ([A-Z][a-z]+|-)+(?= -?\d+ Yd (?:[Rr]ush|(?:Interception|KO) Return|Run|[Pp]ass [Ff]rom))',
+                r'\b[A-Z][\'A-Za-z]+ ([A-Z][a-z]+|-)+(?= -?\d+ Yd (?:[Rr]ush|(?:Interception|KO) Return|Run|[Pp]ass [Ff]rom|Field Goal))',
+                r'(?<=Injury Update: )[A-Z][\'A-Za-z]+ ([A-Z][a-z]+|-)+?(?= has )'
             ]),
         ]
     ),
@@ -105,7 +117,7 @@ entitiy_patterns: List[RegExLabel] = [
             RegEx(
                 expressions=[
                     r'\b(?:no huddle|shotgun)(?=\b)',
-                    r'\b(?:pass|punt) formation(?=\b)'
+                    r'\b(?:pass|punt|run) formation(?=\b)'
                 ],
                 flags=re.IGNORECASE
             ),

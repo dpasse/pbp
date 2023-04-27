@@ -13,7 +13,7 @@ from extr_ds.validators import check_for_differences
 
 def annotate(in_file: str):
     train_sents = make_crf_dataset(
-        get_data(os.path.join('..', 'data', '3', in_file + '.txt')),
+        get_data(os.path.join('..', 'data', '5', in_file + '.txt')),
         entitiy_patterns,
         kb
     )

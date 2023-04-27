@@ -3,6 +3,23 @@
 > Named Entity and Relation Extraction models for NFL play-by-play snippets
 
 
+## Process
+
+1. Scrap Data
+2. Centralize Data
+    - combine multiple files into a single one
+3. Build Dataset / Model
+    1. Split Data - 1% at random
+    2. ITERATE
+        1. Annotate Data
+        2. Inspect Data
+            - if issues, fix and annotate again
+            - may require a complete reset of "gold standard" dataset
+    3. Clear Data
+        - add data to be used in model building - "gold standard"
+    4. Build Model
+
+
 ## 1. Scrap Data
 
 > scrap game ids and play-by-play text from ESPN for 2022 NFL regular season.
@@ -25,7 +42,7 @@ make scrap-pbp
 
 **<i>output files found in "tasks/data/2/"</i>**
 
-## 2. Centralize and Split Data
+## 2. Centralize Data
 
 > create a main source file and split into dev / holdout datasets
 
@@ -34,47 +51,48 @@ make scrap-pbp
 ```cmd
 cd tasks\scrap
 make centralize-data
+```
+
+**<i>output files found in "tasks/data/3/"</i>**
+
+## 3. Build Dataset / Model
+
+**<i>from the project root</i>**
+
+```cmd
+cd tasks\extract
+```
+
+### 1. Split Data - small percentage at random
+
+```cmd
 make split-data
 ```
 
 **<i>output files found in "tasks/data/3/"</i>**
 
-## 3. Programmatically Label the Dev Dataset
+### 2. Programmatically Label Data (Iterate)
 
 > run labeling rules - [config](https://github.com/dpasse/pbp/blob/main/tasks/extract/config.py)
 
-**<i>from the project root</i>**
-
 ```cmd
-cd tasks\extract
 make annotate-data
 ```
 
 **<i>output files found in "tasks/data/4/"</i>**
 
-## 4. Build CRF Model from Programmatically Labeled Dev Dataset
+### 3. Clear Data
+
+```cmd
+make clear-data
+```
+
+**<i>output files found in "tasks/data/5/"</i>**
+
+### 4. Build CRF Model
 
 > run labeling rules - [config](https://github.com/dpasse/pbp/blob/main/tasks/extract/config.py)
 
-**<i>from the project root</i>**
-
 ```cmd
-cd tasks\extract
 make ner
 ```
-
-**<i> compare crf vs rule-based models</i>**
-
-```python
-from extr_ds.validators import check_for_differences
-
-for i, outcomes in enumerate(zip(y_pred, y_train)):
-    differences = check_for_differences(outcomes[1], outcomes[0])
-    if differences.has_diffs:
-        print(i)
-        for diff in differences.diffs_between_labels:
-            print(train_sents[i][diff.index])
-            print(diff.diff_type)
-            print()
-```
-
