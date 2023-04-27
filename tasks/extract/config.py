@@ -1,3 +1,4 @@
+import re
 from typing import List
 
 from extr.regexes import SlimRegEx, RegEx, RegExLabel
@@ -5,13 +6,9 @@ from extr.relations import RegExRelationLabelBuilder
 
 
 kb = {
-    'TEAM': [
-        'Kansas City',
-        'Cleveland',
-        'New Orleans',
-    ],
     'PLAYER': [
-        r'[AE]\.St\. Brown',
+        'A.St. Brown',
+        'E.St. Brown',
         'D. McCourty',
         'T.J. Watt',
         'A.Van Ginkel',
@@ -30,7 +27,9 @@ kb = {
         'WR',
         'RB',
         'TE',
-        'QB'
+        'QB',
+        'Center',
+        'Holder'
     ],
     'TEAM': [
         'ARZ',
@@ -46,6 +45,7 @@ kb = {
         'DEN',
         'DET',
         'GB',
+        'Green Bay',
         'HST',
         'IND',
         'Indianapolis',
@@ -64,7 +64,9 @@ kb = {
         'NO',
         'New Orleans',
         'NYG',
+        'New York Giants',
         'NYJ',
+        'New York Jets',
         'PHI',
         'PIT',
         'SEA',
@@ -98,20 +100,46 @@ entitiy_patterns: List[RegExLabel] = [
         ]
     ),
     RegExLabel(
-        label='DISTANCE',
+        label='FORMATION',
         regexes=[
-            RegEx(expressions=[
-                r'(?<=\s)-?\d+\s+(yards?|Yds?)(?=\b)'
-            ]),
+            RegEx(
+                expressions=[
+                    r'\b(?:no huddle|shotgun)(?=\b)',
+                    r'\b(?:pass|punt) formation(?=\b)'
+                ],
+                flags=re.IGNORECASE
+            ),
         ]
     ),
     RegExLabel(
-        label='SPOT',
+        label='DIRECTION',
+        regexes=[
+            RegEx(
+                expressions=[
+                    r'(?<=\b)(deep|short) (left|right|middle)(?=\b)',
+                    r'(?<=\b)(left|right|middle)(?=\b)'
+                ],
+                flags=re.IGNORECASE
+            ),
+        ]
+    ),
+    RegExLabel(
+        label='QUANTITY',
         regexes=[
             RegEx(expressions=[
-                r'-?\d{1,3}(?=\b)',
-                r'(?<=\sto\s)-?\d{1,3}(?=\s)',
+                r'(?<=\s)-?\d{1,3}(?=\b)',
             ])
+        ]
+    ),
+    RegExLabel(
+        label='EVENT',
+        regexes=[
+            RegEx(
+                expressions=[
+                    r'\b(?:kicks|punts|pass incomplete|pass|scrambles|rush|sacked)\b',
+                ],
+                flags=re.IGNORECASE
+            )
         ]
     )
 ]
@@ -126,13 +154,13 @@ relation_patterns = [
             e1='PERIOD'
         ) \
         .build(),
-    RegExRelationLabelBuilder('spot_of_ball') \
+    RegExRelationLabelBuilder('is_spot_of_ball') \
         .add_e1_to_e2(
             e1='TEAM',
             relation_expressions=[
                 r'\s+',
             ],
-            e2='SPOT',
+            e2='QUANTITY',
         ) \
         .build()
 ]
