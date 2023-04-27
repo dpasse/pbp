@@ -8,11 +8,13 @@ def save_data(dataset: Set[str], file_path: str) -> None:
         for record in get_data(file_path):
             if len(record.strip()) == 0:
                 continue
-            
+
             dataset.add(record)
 
     with open(file_path, 'w') as dev:
-        dev.write('\n'.join(dataset))
+        dev.write(
+            '\n'.join(list(dataset)).strip()
+        )
 
 def clear_data(in_file: str):
     dataset = set(

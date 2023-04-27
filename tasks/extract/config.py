@@ -21,7 +21,8 @@ kb = {
         'Velus Jones Jr.',
         'Melvin Gordon III',
         'Tony Fields II',
-        'L.Vander Esch'
+        'L.Vander Esch',
+        'Ray-Ray McCloud III',
     ],
     'PERIOD': [
         '1st',
@@ -117,7 +118,7 @@ entitiy_patterns: List[RegExLabel] = [
             RegEx(
                 expressions=[
                     r'\b(?:no huddle|shotgun)(?=\b)',
-                    r'\b(?:pass|punt|run) formation(?=\b)'
+                    r'\b(?:pass|punt|run|field goal) formation(?=\b)'
                 ],
                 flags=re.IGNORECASE
             ),
