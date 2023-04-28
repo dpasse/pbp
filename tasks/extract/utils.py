@@ -23,14 +23,8 @@ def transform_document(document: str) -> str:
     )
 
     text = re.sub(
-        r'\b(\d+)(-)([A-Z]\.)',
-        r'\1 \2 \3',
-        text
-    )
-
-    text = re.sub(
-        r'(Coverage by \d+)(-)([A-Z])',
-        r'\1 \2 \3',
+        r'\b(\d+)(-)([A-Z])',
+        r'\2 \3',
         text
     )
 

@@ -47,5 +47,5 @@ def split_centralized_data(amount: float, seed: int = None) -> None:
 
 
 if __name__ == '__main__':
-    amount =  25
+    amount =  50
     split_centralized_data(amount)
