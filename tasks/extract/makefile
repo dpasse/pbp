@@ -1,12 +1,11 @@
-annotate-data:
+annotate:
 	python annotate_data.py
 
-split-data:
+split:
 	python split_data.py
+	make annotate
 
-	make annotate-data
-
-clear-data:
+save:
 	python clear_data.py
 
 ner:

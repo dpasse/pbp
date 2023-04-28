@@ -9,15 +9,17 @@
 2. Centralize Data
     - combine multiple files into a single one
 3. Build Dataset / Model
-    1. Split Data - 1% at random
+    1. Split
+        - splits random subset for managable inspection - 1% at random
     2. ITERATE
         1. Annotate Data
+            - builds a redacted file for quick visual inspection
         2. Inspect Data
             - if issues, fix and annotate again
             - may require a complete reset of "gold standard" dataset
-    3. Clear Data
-        - add data to be used in model building - "gold standard"
-    4. Build Model
+        3. Save
+            - add data to be used in model building - "gold standard"
+        4. Build Model
 
 
 ## 1. Scrap Data
@@ -66,7 +68,7 @@ cd tasks\extract
 ### 1. Split Data - small percentage at random
 
 ```cmd
-make split-data
+make split
 ```
 
 **<i>output files found in "tasks/data/3/"</i>**
@@ -76,15 +78,15 @@ make split-data
 > run labeling rules - [config](https://github.com/dpasse/pbp/blob/main/tasks/extract/config.py)
 
 ```cmd
-make annotate-data
+make annotate
 ```
 
 **<i>output files found in "tasks/data/4/"</i>**
 
-### 3. Clear Data
+### 3. Save data for model building
 
 ```cmd
-make clear-data
+make save
 ```
 
 **<i>output files found in "tasks/data/5/"</i>**

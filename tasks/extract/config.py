@@ -138,7 +138,7 @@ entitiy_patterns: List[RegExLabel] = [
             RegEx(
                 expressions=[
                     r'\b(?:no huddle|shotgun)(?=\b)',
-                    r'\b(?:pass|punt|run|field goal) formation(?=\b)'
+                    r'\b(?:pass|punt|run|field goal|kick) formation(?=\b)'
                 ],
                 flags=re.IGNORECASE
             ),
@@ -160,7 +160,7 @@ entitiy_patterns: List[RegExLabel] = [
         label='QUANTITY',
         regexes=[
             RegEx(expressions=[
-                r'(?<=\s)-?\d{1,3}(?=\b)',
+                r'(?<=[\s\(])-?\d{1,3}(?=\b)',
             ])
         ]
     ),
