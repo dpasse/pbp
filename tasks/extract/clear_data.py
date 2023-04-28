@@ -11,9 +11,11 @@ def save_data(dataset: Set[str], file_path: str) -> None:
 
             dataset.add(record)
 
+    dataset = list(sorted(dataset, key=len, reverse=True))
+
     with open(file_path, 'w') as dev:
         dev.write(
-            '\n'.join(list(dataset)).strip()
+            '\n'.join(dataset).strip()
         )
 
 def clear_data(in_file: str):
@@ -27,6 +29,19 @@ def clear_data(in_file: str):
         dataset,
         os.path.join('..', 'data', '5', in_file + '.txt')
     )
+
+    redacted_dataset = set(
+        get_data(
+            os.path.join('..', 'data', '4', in_file + '-ents-redacted' + '.txt')
+        )
+    )
+
+    save_data(
+        redacted_dataset,
+        os.path.join('..', 'data', '5', in_file + '-ents-redacted' + '.txt')
+    )
+
+    
 
 
 if __name__ == '__main__':

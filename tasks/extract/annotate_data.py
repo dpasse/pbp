@@ -5,28 +5,24 @@ import json
 
 from utils import transform_document
 from filesystem import get_data
-from config import entitiy_patterns, relation_patterns, kb
-from extr.entities import create_entity_extractor, LabelOnlyEntityAnnotator, EntityAnnotator
-from extr.relations import RelationExtractor, RelationAnnotator
+from config import entitiy_patterns, kb
+from extr.entities import create_entity_extractor, LabelOnlyEntityAnnotator
 
 
 annotator = LabelOnlyEntityAnnotator()
 entity_extractor = create_entity_extractor(entitiy_patterns, kb)
-relations_extractor = RelationExtractor(relation_patterns)
-relation_annotator = RelationAnnotator()
 
 
 def save_data(dataset: List[str], file_path: str) -> None:
     with open(file_path, 'w') as dev:
         dev.write('\n'.join(dataset))
 
-def annotate(in_file: str, entities_out_file: str, relations_out_file: str):
+def annotate(in_file: str, entities_out_file: str):
     dataset = get_data(
         os.path.join('..', 'data', '3', in_file + '.txt')
     )
 
     text_annotations: List[str] = []
-    relation_annotations: List[str] = []
     extracted_text_by_label: Dict[str, Set[str]] = {}
     for row in dataset:
         text = transform_document(row)
@@ -43,33 +39,31 @@ def annotate(in_file: str, entities_out_file: str, relations_out_file: str):
 
             extracted_text_by_label[entity.label].add(entity.text)
 
-        
-        relations = relations_extractor.extract(
-            EntityAnnotator().annotate(text, entities)
-        )
-
-        relation_annotations.extend(
-            list(
-                map(
-                    lambda rel: f'{rel.label} | {relation_annotator.annotate(text, rel)}',
-                    relations
-                )
-            )
-        )
-
     save_data(
         text_annotations,
         os.path.join('..', 'data', '4', entities_out_file + '.txt')
     )
 
-    save_data(
-        [ re.sub(' +', ' ', re.sub(r'<[A-Z]+>.+?</[A-Z]+>', ' ', row)) for row in text_annotations ],
-        os.path.join('..', 'data', '4', entities_out_file + '-redacted.txt')
-    )
+    redacted_templates = set()
+    redacted_templates_file_path = os.path.join('..', 'data', '5', entities_out_file + '-redacted.txt')
+    if os.path.exists(redacted_templates_file_path):
+        redacted_templates = set(
+            get_data(redacted_templates_file_path)
+        )
+
+    redacted_dataset = [
+        row
+        for _, row in (
+            (i, re.sub(' +', ' ', re.sub(r'<[A-Z]+>.+?</[A-Z]+>', ' ', row)))
+            for i, row
+            in enumerate(text_annotations)
+        )
+        if not row in redacted_templates
+    ]
 
     save_data(
-        relation_annotations,
-        os.path.join('..', 'data', '4', relations_out_file + '.txt')
+        redacted_dataset,
+        os.path.join('..', 'data', '4', entities_out_file + '-redacted.txt')
     )
 
     for key, value in extracted_text_by_label.items():
@@ -81,4 +75,7 @@ def annotate(in_file: str, entities_out_file: str, relations_out_file: str):
 
 
 if __name__ == '__main__':
-    annotate('dev', 'dev-ents', 'dev-rels')
+    annotate(
+        'dev',
+        'dev-ents',
+    )

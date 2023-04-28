@@ -9,9 +9,14 @@ def partition(data: List[str], pivot: int) -> Tuple[List[str], List[str]]:
         data[pivot:]
     )
 
-def split_centralized_data(percentage: float) -> None:
-    directory = os.path.join('..', 'data', '3')
+def save_data(file_path: str, data: List[str]) -> None:
+    with open(file_path, 'w') as output:
+        output.write(
+            ''.join(data)
+        )
 
+def split_centralized_data(amount: float, seed: int = None) -> None:
+    directory = os.path.join('..', 'data', '3')
     with open(os.path.join(directory, 'source.txt'), 'r') as source_file:
         source_data = [
             row
@@ -19,21 +24,28 @@ def split_centralized_data(percentage: float) -> None:
             if len(row.strip()) > 0
         ]
 
-    ## random.seed(72)
+    if seed:
+        random.seed(seed)
+        
+    random.shuffle(source_data)
 
-    for _ in range(3):
-        random.shuffle(source_data)
+    pivot = amount
+    if amount < 1:
+        pivot = int(len(source_data) * amount)
 
-    pivot = int(len(source_data) * percentage)
     development_set, holdout_set = partition(source_data, pivot)
 
-    with open(os.path.join(directory, 'dev.txt'), 'w') as instances_file:
-        instances_file.write(''.join(development_set))
-            
-    with open(os.path.join(directory, 'holdouts.txt'), 'w') as holdouts_file:
-        holdouts_file.write(''.join(holdout_set))
+    save_data(
+        os.path.join(directory, 'dev.txt'),
+        development_set
+    )
+
+    save_data(
+        os.path.join(directory, 'holdouts.txt'),
+        holdout_set
+    )
 
 
 if __name__ == '__main__':
-    percentage = .005
-    split_centralized_data(percentage)
+    amount =  25
+    split_centralized_data(amount)
