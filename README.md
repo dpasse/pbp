@@ -62,39 +62,35 @@ make centralize-data
 **<i>from the project root</i>**
 
 ```cmd
-cd tasks\extract
+cd workspace
 ```
 
 ### 1. Split Data - small percentage at random
 
 ```cmd
-make split
+extr-ds --split
 ```
 
-**<i>output files found in "tasks/data/3/"</i>**
+**<i>output files found in "workspace/2/"</i>**
 
 ### 2. Programmatically Label Data (Iterate)
 
-> run labeling rules - [config](https://github.com/dpasse/pbp/blob/main/tasks/extract/config.py)
-
 ```cmd
-make annotate
+extr-ds --annotate
 ```
 
-**<i>output files found in "tasks/data/4/"</i>**
+**<i>output files found in "workspace/3/"</i>**
 
 ### 3. Save data for model building
 
 ```cmd
-make save
+extr-ds
 ```
 
-**<i>output files found in "tasks/data/5/"</i>**
+**<i>output files found in "tasks/data/4/"</i>**
 
 ### 4. Build CRF Model
 
-> run labeling rules - [config](https://github.com/dpasse/pbp/blob/main/tasks/extract/config.py)
-
 ```cmd
-make ner
+make crf
 ```
