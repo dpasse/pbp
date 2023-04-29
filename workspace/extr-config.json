@@ -1,0 +1,6 @@
+{
+  "source": "source.txt",
+  "split": {
+    "amount": 25
+  }
+}

@@ -1,8 +1,7 @@
+from typing import Dict, List
 import re
-from typing import List
 
 from extr.regexes import RegEx, RegExLabel
-from extr.relations import RegExRelationLabelBuilder
 
 
 kb = {
@@ -25,6 +24,10 @@ kb = {
         'Ray-Ray McCloud III',
         'Joey Slye',
         'PJ Walker',
+        'A.J. Brown',
+
+        ### awful.
+        'Jack',
     ],
     'PERIOD': [
         '1st',
@@ -110,7 +113,7 @@ kb = {
     ]
 }
 
-entitiy_patterns: List[RegExLabel] = [
+entity_patterns: List[RegExLabel] = [
     RegExLabel(
         label='TIME',
         regexes=[
@@ -175,25 +178,4 @@ entitiy_patterns: List[RegExLabel] = [
             )
         ]
     )
-]
-
-relation_patterns = [
-    RegExRelationLabelBuilder('is_at') \
-        .add_e2_to_e1(
-            e2='TIME',
-            relation_expressions=[
-                r'(\s-\s)',
-            ],
-            e1='PERIOD'
-        ) \
-        .build(),
-    RegExRelationLabelBuilder('is_spot_of_ball') \
-        .add_e1_to_e2(
-            e1='TEAM',
-            relation_expressions=[
-                r'\s+',
-            ],
-            e2='QUANTITY',
-        ) \
-        .build()
 ]

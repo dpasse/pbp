@@ -1,0 +1,2 @@
+crf:
+	python ./crf.py
