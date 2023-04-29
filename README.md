@@ -84,7 +84,7 @@ extr-ds --annotate
 ### 3. Save data for model building
 
 ```cmd
-extr-ds
+extr-ds --save
 ```
 
 **<i>output files found in "tasks/data/4/"</i>**
