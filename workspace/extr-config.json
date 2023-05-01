@@ -1,6 +1,10 @@
 {
   "source": "source.txt",
   "split": {
-    "amount": 25
+    "amount": 15
+  },
+  "annotations": {
+    "enable-html": true,
+    "filter-redactions": true
   }
 }

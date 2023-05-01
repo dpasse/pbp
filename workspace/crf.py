@@ -15,7 +15,7 @@ from extr_ds.validators import check_for_differences
 
 from extr.entities import create_entity_extractor
 from extr_ds.labelers import IOB
-from extr_ds.manager.filesystem import load_data
+from extr_ds.manager.utils.filesystem import load_data
 
 
 def make_crf_dataset():
@@ -52,7 +52,7 @@ def make_crf_dataset():
 
     return train_set
 
-def annotate():
+def run_model():
     train_sents = make_crf_dataset()
 
     X = [sent2features(s) for s in train_sents]
@@ -106,4 +106,4 @@ def annotate():
 
 
 if __name__ == '__main__':
-    annotate()
+    run_model()
