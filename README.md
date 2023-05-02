@@ -73,7 +73,7 @@ extr-ds --split
 
 **<i>output files found in "workspace/2/"</i>**
 
-### 2. Programmatically Label Data (Iterate)
+### 2. Programmatically Label Named Entities (Iterate)
 
 ```cmd
 extr-ds --annotate
@@ -81,7 +81,15 @@ extr-ds --annotate
 
 **<i>output files found in "workspace/3/"</i>**
 
-### 3. Save data for model building
+### 3. Programmatically Label Relations (Iterate)
+
+```cmd
+extr-ds --relate
+```
+
+**<i>output files found in "workspace/3/"</i>**
+
+### 4. Save data for model building
 
 ```cmd
 extr-ds --save
@@ -89,7 +97,7 @@ extr-ds --save
 
 **<i>output files found in "tasks/data/4/"</i>**
 
-### 4. Build CRF Model
+### 5. Build CRF Model
 
 ```cmd
 make crf
