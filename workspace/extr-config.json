@@ -1,7 +1,7 @@
 {
   "source": "source.txt",
   "split": {
-    "amount": 25
+    "amount": 5
   },
   "annotations": {
     "enable-html": true,

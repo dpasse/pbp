@@ -206,6 +206,6 @@ relation_patterns: List[RegExLabel] = [
 
 ## ie. ('PERSON', 'ORG', 'NO_RELATION')
 relation_defaults: List[Tuple[str, str, str]] = [
-    ('PERIOD', 'TIME', 'NO_RELATION'),
+    ## ('PERIOD', 'TIME', 'NO_RELATION'),
     ('TEAM', 'QUANTITY', 'NO_RELATION'),
 ]
