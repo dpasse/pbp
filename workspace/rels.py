@@ -1,5 +1,4 @@
 import os
-import re
 import json
 import random
 import numpy
@@ -8,6 +7,7 @@ import evaluate
 from datasets import Dataset
 from extr_ds.manager.utils.filesystem import load_document
 
+import tensorflow as tf
 from transformers import logging, \
                          pipeline, \
                          set_seed, \
@@ -19,7 +19,7 @@ from transformers.keras_callbacks import KerasMetricCallback
 
 logging.set_verbosity_error()
 
-epochs = 25
+epochs = 5
 
 pretrained_model = 'bert-base-cased'
 model_output_directory = 'transformers/nfl_pbp_relation_classifier'
@@ -85,7 +85,7 @@ def get_dataset(tokenizer):
         columns=['attention_mask', 'input_ids'],
         label_cols='label',
         shuffle=True,
-        batch_size=4,
+        batch_size=16,
         collate_fn=data_collator,
     )
 
@@ -97,7 +97,7 @@ def get_dataset(tokenizer):
         columns=['attention_mask', 'input_ids'],
         label_cols='label',
         shuffle=True,
-        batch_size=4,
+        batch_size=16,
         collate_fn=data_collator,
     )
 
@@ -132,7 +132,8 @@ def build_model():
 
     model.resize_token_embeddings(len(tokenizer))
 
-    model.compile(optimizer="adam")
+    optimizer = tf.keras.optimizers.Adam(learning_rate=2e-5)
+    model.compile(optimizer=optimizer)
 
     model.fit(
         x=tf_train_set,

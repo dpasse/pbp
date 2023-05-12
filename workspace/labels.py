@@ -183,16 +183,30 @@ entity_patterns: List[RegExLabel] = [
 ]
 
 ## RELATIONS
-relation_patterns: List[RegExLabel] = [
-    RegExRelationLabelBuilder('is_at') \
-        .add_e2_to_e1(
-            e2='TIME',
-            relation_expressions=[
-                r'(\s-\s)',
-            ],
-            e1='PERIOD'
-        ) \
-        .build(),
+relation_patterns: List[RegExLabel] = []
+
+## ie. ('PERSON', 'ORG', 'NO_RELATION')
+relation_defaults: List[Tuple[str, str, str]] = []
+
+## relation_defaults.append(
+##     ('PERIOD', 'TIME', 'NO_RELATION'),
+## )
+## relation_patterns.append(
+##     RegExRelationLabelBuilder('is_at') \
+##         .add_e2_to_e1(
+##             e2='TIME',
+##             relation_expressions=[
+##                 r'(\s-\s)',
+##             ],
+##             e1='PERIOD'
+##         ) \
+##         .build()
+## )
+
+relation_defaults.append(
+    ('TEAM', 'QUANTITY', 'NO_RELATION')
+)
+relation_patterns.append(
     RegExRelationLabelBuilder('is_spot_of_ball') \
         .add_e1_to_e2(
             e1='TEAM',
@@ -202,10 +216,4 @@ relation_patterns: List[RegExLabel] = [
             e2='QUANTITY',
         ) \
         .build()
-]
-
-## ie. ('PERSON', 'ORG', 'NO_RELATION')
-relation_defaults: List[Tuple[str, str, str]] = [
-    ## ('PERIOD', 'TIME', 'NO_RELATION'),
-    ('TEAM', 'QUANTITY', 'NO_RELATION'),
-]
+)
