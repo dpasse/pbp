@@ -133,3 +133,4 @@ tasks/data/*/*.txt
 workspace/2
 workspace/3
 workspace/4
+workspace/transformers
