@@ -161,8 +161,8 @@ def pipeline_test():
     )
 
     examples = [
-        '(4:11 - 3rd) (Shotgun) K.Murray pass deep middle to Z.Ertz to <e1>SEA</e1> <e2>43</e2> for 32 yards (R.Neal).',
-        '(15:00 - 3rd) (Shotgun) T.Siemian sacked at <e1>CHI</e1> 18 for <e2>-7</e2> yards (sack split by N.Shepherd and J.Franklin-Myers).'
+        '(4:11 - 3rd) (Shotgun) K.Murray pass deep middle to Z.Ertz to <e1:TEAM>SEA</e1:TEAM> <e2:QUANTITY>43</e2:QUANTITY> for 32 yards (R.Neal).',
+        '(15:00 - 3rd) (Shotgun) T.Siemian sacked at <e1:TEAM>CHI</e1:TEAM> 18 for <e2:QUANTITY>-7</e2:QUANTITY> yards (sack split by N.Shepherd and J.Franklin-Myers).'
     ]
 
     vlookup = { c:b for b,c in tokenizer.get_vocab().items() }
