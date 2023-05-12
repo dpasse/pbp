@@ -13,12 +13,13 @@ from transformers import logging, \
                          set_seed, \
                          DataCollatorWithPadding, \
                          AutoTokenizer, \
-                         TFAutoModelForSequenceClassification, \
-                         TextClassificationPipeline
+                         TFAutoModelForSequenceClassification
 from transformers.keras_callbacks import KerasMetricCallback
 
 
 logging.set_verbosity_error()
+
+epochs = 25
 
 pretrained_model = 'bert-base-cased'
 model_output_directory = 'transformers/nfl_pbp_relation_classifier'
@@ -27,7 +28,26 @@ labels = ['NO_RELATION', 'is_spot_of_ball']
 label2id = { label:i for i, label in enumerate(labels) }
 id2label = { i:label for i, label in enumerate(labels) }
 
-set_seed(52)
+e1s = [
+    'TEAM'
+]
+
+e2s = [
+    'QUANTITY'
+]
+
+tokens_to_add = []
+
+for e1 in e1s:
+    tokens_to_add.append(f'<e1:{e1}>')
+    tokens_to_add.append(f'</e1:{e1}>')
+    
+for e2 in e2s:
+    tokens_to_add.append(f'<e2:{e2}>')
+    tokens_to_add.append(f'</e2:{e2}>')
+
+seed = 52
+set_seed(seed)
 
 def get_dataset(tokenizer):
     data_collator = DataCollatorWithPadding(
@@ -39,6 +59,7 @@ def get_dataset(tokenizer):
         load_document(os.path.join('4', 'rels.json'))
     )
 
+    random.seed(seed)
     random.shuffle(rels)
 
     data = []
@@ -51,9 +72,8 @@ def get_dataset(tokenizer):
     def tokenize_function(examples):
         return tokenizer(examples["text"])
 
-
     n = len(rels)
-    split_point = .7
+    split_point = .8
     pivot = int(n * split_point)
     print('len#:', n, 'pivot:', pivot)
     
@@ -65,7 +85,7 @@ def get_dataset(tokenizer):
         columns=['attention_mask', 'input_ids'],
         label_cols='label',
         shuffle=True,
-        batch_size=2,
+        batch_size=4,
         collate_fn=data_collator,
     )
 
@@ -77,7 +97,7 @@ def get_dataset(tokenizer):
         columns=['attention_mask', 'input_ids'],
         label_cols='label',
         shuffle=True,
-        batch_size=2,
+        batch_size=4,
         collate_fn=data_collator,
     )
 
@@ -97,7 +117,10 @@ def build_model():
         truncation=True,
         padding='max_length',
     )
-        
+
+    tokens_added = tokenizer.add_tokens(tokens_to_add)
+    print('added', tokens_added, 'tokens')
+
     tf_train_set, tf_test_set = get_dataset(tokenizer)
 
     model = TFAutoModelForSequenceClassification.from_pretrained(
@@ -107,7 +130,8 @@ def build_model():
         label2id=label2id,
     )
 
-    epochs = 5
+    model.resize_token_embeddings(len(tokenizer))
+
     model.compile(optimizer="adam")
 
     model.fit(
@@ -126,19 +150,29 @@ def build_model():
         model_to_save.save_pretrained(model_output_directory)
 
 def pipeline_test():
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_output_directory
+    )
+
     classifier = pipeline(
         "text-classification", 
         model=model_output_directory,
         top_k=None
     )
 
-    text = '(4:11 - 3rd) (Shotgun) K.Murray pass deep middle to Z.Ertz to <e1>SEA</e1> <e2>43</e2> for 32 yards (R.Neal).'
-    print(text)
-    print(classifier(text))
+    examples = [
+        '(4:11 - 3rd) (Shotgun) K.Murray pass deep middle to Z.Ertz to <e1>SEA</e1> <e2>43</e2> for 32 yards (R.Neal).',
+        '(15:00 - 3rd) (Shotgun) T.Siemian sacked at <e1>CHI</e1> 18 for <e2>-7</e2> yards (sack split by N.Shepherd and J.Franklin-Myers).'
+    ]
 
-    text = '(15:00 - 3rd) (Shotgun) T.Siemian sacked at <e1>CHI</e1> 18 for <e2>-7</e2> yards (sack split by N.Shepherd and J.Franklin-Myers).'
-    print(text)
-    print(classifier(text))
+    vlookup = { c:b for b,c in tokenizer.get_vocab().items() }
+    for text in examples:
+        response = tokenizer(text)
+
+        print(text)
+        print('tokens:', [vlookup[c] for c in response['input_ids']])
+        print(classifier(text))
+
 
 if __name__ == '__main__':
     build_model()
