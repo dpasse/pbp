@@ -30,8 +30,6 @@ id2label = { i:label for i, label in enumerate(labels) }
 set_seed(52)
 
 def get_dataset(tokenizer):
-    split_point = .5
-
     data_collator = DataCollatorWithPadding(
         tokenizer,
         return_tensors='tf'
@@ -43,19 +41,21 @@ def get_dataset(tokenizer):
 
     random.shuffle(rels)
 
-    data = [
-        {
+    data = []
+    for row in rels:
+        data.append({
             'text': row['sentence'],
             'label': label2id[row['label']]
-        }
-        for row in rels
-    ]
+        })
 
     def tokenize_function(examples):
         return tokenizer(examples["text"])
 
 
-    pivot = int(len(rels) * split_point)
+    n = len(rels)
+    split_point = .7
+    pivot = int(n * split_point)
+    print('len#:', n, 'pivot:', pivot)
     
     train_dataset = Dataset.from_list(data[:pivot])
     tf_train_set = train_dataset.map(
