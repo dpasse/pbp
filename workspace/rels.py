@@ -1,3 +1,4 @@
+from typing import List
 import os
 import json
 import random
@@ -20,34 +21,30 @@ from transformers.keras_callbacks import KerasMetricCallback
 logging.set_verbosity_error()
 
 epochs = 5
-
-pretrained_model = 'bert-base-cased'
-model_output_directory = 'transformers/nfl_pbp_relation_classifier'
+model_checkpoint = 'bert-base-cased'
+model_output_checkpoint = 'transformers/nfl_pbp_relation_classifier'
 
 labels = ['NO_RELATION', 'is_spot_of_ball']
+e1s = ['TEAM']
+e2s = ['QUANTITY']
 label2id = { label:i for i, label in enumerate(labels) }
 id2label = { i:label for i, label in enumerate(labels) }
 
-e1s = [
-    'TEAM'
-]
-
-e2s = [
-    'QUANTITY'
-]
-
-tokens_to_add = []
-
-for e1 in e1s:
-    tokens_to_add.append(f'<e1:{e1}>')
-    tokens_to_add.append(f'</e1:{e1}>')
-    
-for e2 in e2s:
-    tokens_to_add.append(f'<e2:{e2}>')
-    tokens_to_add.append(f'</e2:{e2}>')
-
 seed = 52
 set_seed(seed)
+
+def get_custom_tokens() -> List[str]:
+    tokens_to_add = []
+
+    for e1 in e1s:
+        tokens_to_add.append(f'<e1:{e1}>')
+        tokens_to_add.append(f'</e1:{e1}>')
+        
+    for e2 in e2s:
+        tokens_to_add.append(f'<e2:{e2}>')
+        tokens_to_add.append(f'</e2:{e2}>')
+
+    return tokens_to_add
 
 def get_dataset(tokenizer):
     data_collator = DataCollatorWithPadding(
@@ -112,19 +109,19 @@ def compute_metrics(eval_pred):
 
 def build_model():
     tokenizer = AutoTokenizer.from_pretrained(
-        pretrained_model,
+        model_checkpoint,
         use_fast=True,
         truncation=True,
         padding='max_length',
     )
 
-    tokens_added = tokenizer.add_tokens(tokens_to_add)
-    print('added', tokens_added, 'tokens')
+    tokens_to_add = get_custom_tokens()
+    tokenizer.add_tokens(tokens_to_add)
 
     tf_train_set, tf_test_set = get_dataset(tokenizer)
 
     model = TFAutoModelForSequenceClassification.from_pretrained(
-        pretrained_model,
+        model_checkpoint,
         num_labels=len(label2id),
         id2label=id2label,
         label2id=label2id,
@@ -148,16 +145,16 @@ def build_model():
     )
 
     for model_to_save in [tokenizer, model]:
-        model_to_save.save_pretrained(model_output_directory)
+        model_to_save.save_pretrained(model_output_checkpoint)
 
 def pipeline_test():
     tokenizer = AutoTokenizer.from_pretrained(
-        model_output_directory
+        model_output_checkpoint
     )
 
     classifier = pipeline(
         "text-classification", 
-        model=model_output_directory,
+        model=model_output_checkpoint,
         top_k=None
     )
 
