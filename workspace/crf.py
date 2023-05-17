@@ -1,5 +1,3 @@
-from typing import List
-
 import os
 import json
 
@@ -8,15 +6,11 @@ from sklearn_crfsuite import metrics
 
 from nltk import pos_tag
 
-from labels import entity_patterns, kb
 from models.features import sent2features, sent2labels
-from utils import transform_text, sentence_tokenizer
 from sklearn.model_selection import train_test_split
 from extr_ds.validators import check_for_differences
 
-from extr.entities import create_entity_extractor
-from extr_ds.labelers import IOB
-from extr_ds.manager.utils.filesystem import load_data, load_document
+from extr_ds.manager.utils.filesystem import load_document
 
 
 def make_crf_dataset():
