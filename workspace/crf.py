@@ -1,6 +1,7 @@
 from typing import List
 
 import os
+import json
 
 import sklearn_crfsuite
 from sklearn_crfsuite import metrics
@@ -15,40 +16,25 @@ from extr_ds.validators import check_for_differences
 
 from extr.entities import create_entity_extractor
 from extr_ds.labelers import IOB
-from extr_ds.manager.utils.filesystem import load_data
+from extr_ds.manager.utils.filesystem import load_data, load_document
 
 
 def make_crf_dataset():
-    entity_extractor = create_entity_extractor(entity_patterns, kb)
-    labeler = IOB(sentence_tokenizer, entity_extractor)
-    
     train_set = []
-    for i, row in enumerate(load_data(os.path.join('4', 'ents.txt'))):
-        text = transform_text(row)
-
-        try:
-            for observation in labeler.label(text):
-
-                tokens = list(map(lambda a: a.text, observation.tokens))
-                labels = observation.labels
-
-                assert len(tokens) == len(labels)
-
-                train_set.append(
-                    list(
-                        zip(
-                            tokens,
-                            list(map(lambda a: a[1], pos_tag(tokens))),
-                            labels
-                        )
-                    )
+    records = json.loads(load_document(os.path.join('4', 'ents-iob.json')))
+    for record in records:
+        tokens = record['tokens']
+        labels = record['labels']
+        
+        train_set.append(
+            list(
+                zip(
+                    tokens,
+                    list(map(lambda a: a[1], pos_tag(tokens))),
+                    labels
                 )
-        except:
-            print('text:', text)
-            print('row#:', i+1)
-            print('tokens:', sentence_tokenizer(text))
-
-            raise
+            )
+        )
 
     return train_set
 
