@@ -1,4 +1,5 @@
-from typing import List
+from typing import Any, Dict
+
 import re
 import os
 import json
@@ -7,7 +8,10 @@ import numpy
 import evaluate
 
 from datasets import Dataset
+from utils import sentence_tokenizer
+from extr import Entity, Location
 from extr_ds.manager.utils.filesystem import load_document
+from extr_ds.labelers.iob import Labeler
 
 import tensorflow as tf
 from transformers import logging, \
@@ -186,11 +190,38 @@ def pipeline_test():
         '(6:51 - 1st) (Shotgun) P.Mahomes scrambles right end to LAC 34 for 2 yards (S.Joseph; K.Van Noy). FUMBLES (S.Joseph), and recovers at LAC 34.',
     ]
 
-    for text in examples:
-        entities = classifier(text)
+    def json_to_entity(response: Dict[str, Any]) -> Entity:
+        location = Location(start=response['start'], end=response['end'])
+        return Entity(
+            label=response['entity_group'],
+            text=location.extract(text),
+            location=location
+        )
+    
+    threshold = .5
 
-        print(text)
-        print(entities)
+    annotations = []
+    for text in examples:
+        iob = []
+        response = filter(lambda r: r['score'] >= threshold, classifier(text))
+        print(response)
+        print()
+
+        entities = list(map(json_to_entity, response))
+        for grouping in Labeler(sentence_tokenizer).label(text, entities):
+            iob.append({
+                'tokens': [tk.text for tk in grouping.tokens],
+                'labels': grouping.labels,
+            })
+
+        annotations.append({
+            'text': text,
+            'iob': iob
+        })
+
+    print('iob2')
+    print(annotations)
+    
 
 if __name__ == '__main__':
     build_model()
