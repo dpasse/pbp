@@ -4,10 +4,8 @@ import re
 from nltk.tokenize import word_tokenize
 
 
-def sentence_tokenizer(text: str) -> List[List[str]]:
-    return [
-        word_tokenize(text)
-    ]
+def word_tokenizer(text: str) -> List[str]:
+    return word_tokenize(text)
 
 def transform_text(document: str) -> str:
     text = document[:]
