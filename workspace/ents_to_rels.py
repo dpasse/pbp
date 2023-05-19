@@ -84,17 +84,21 @@ def run():
             relation_builder=RelationBuilder([
                 ('TEAM', 'QUANTITY', 'NO_RELATION')
             ]),
-        ),
+        )
     )
 
-    relation_labels = classifier.label(text)
-    for relation_label in relation_labels:
+    results = classifier.label(text)
+
+    for entity in results.entities:
+        print(entity)
+
+    for relation_label in results.relation_labels:
         print(relation_label)
 
     print()
     print()
 
-    for relation_label in filter(lambda a: a.label != 'NO_RELATION', relation_labels):
+    for relation_label in filter(lambda a: a.label != 'NO_RELATION', results.relation_labels):
         print(relation_label)
         
 if __name__ == '__main__':
