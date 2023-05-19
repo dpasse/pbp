@@ -8,7 +8,7 @@ import numpy
 import evaluate
 
 from datasets import Dataset
-from utils import sentence_tokenizer
+from utils import word_tokenizer
 from extr import Entity, Location
 from extr_ds.manager.utils.filesystem import load_document
 from extr_ds.labelers.iob import Labeler
@@ -208,7 +208,7 @@ def pipeline_test():
         print()
 
         entities = list(map(json_to_entity, response))
-        for grouping in Labeler(sentence_tokenizer).label(text, entities):
+        for grouping in Labeler(word_tokenizer).label(text, entities):
             iob.append({
                 'tokens': [tk.text for tk in grouping.tokens],
                 'labels': grouping.labels,
