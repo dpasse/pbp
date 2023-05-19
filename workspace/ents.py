@@ -190,24 +190,23 @@ def pipeline_test():
         '(6:51 - 1st) (Shotgun) P.Mahomes scrambles right end to LAC 34 for 2 yards (S.Joseph; K.Van Noy). FUMBLES (S.Joseph), and recovers at LAC 34.',
     ]
 
-    def json_to_entity(response: Dict[str, Any]) -> Entity:
-        location = Location(start=response['start'], end=response['end'])
-        return Entity(
-            label=response['entity_group'],
-            text=location.extract(text),
-            location=location
-        )
-    
     threshold = .5
 
     annotations = []
     for text in examples:
-        iob = []
-        response = filter(lambda r: r['score'] >= threshold, classifier(text))
-        print(response)
-        print()
+        entities = []
+        for response in filter(lambda r: r['score'] >= threshold, classifier(text)):
+            location = Location(start=response['start'], end=response['end'])
+            entities.append(
+                Entity(
+                    identifier=len(entities) + 1,
+                    label=response['entity_group'],
+                    text=location.extract(text),
+                    location=location
+                )
+            )
 
-        entities = list(map(json_to_entity, response))
+        iob = []
         for grouping in Labeler(word_tokenizer).label(text, entities):
             iob.append({
                 'tokens': [tk.text for tk in grouping.tokens],

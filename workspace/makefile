@@ -6,3 +6,6 @@ ents:
 
 rels:
 	python ./rels.py
+
+run:
+	python ./ents_to_rels.py
