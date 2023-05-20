@@ -1,13 +1,10 @@
-from typing import Any, Dict, List
+from typing import List
 
 from extr import Entity, Location, Relation
 from extr.entities import AbstractEntityExtractor
-from extr.relations import AbstractRelationExtractor
-from extr_ds.labelers.relation import RelationLabeler, RelationBuilder, BaseRelationLabeler, RelationClassification
+from extr_ds.labelers.relation import RelationBuilder, BaseRelationLabeler, RelationClassification
 from extr_ds.models import RelationLabel
-from extr.relations import RelationAnnotatorWithEntityType
-from transformers import logging, \
-                         pipeline
+from transformers import logging, pipeline
 
 logging.set_verbosity_error()
 
@@ -81,24 +78,20 @@ def run():
         TransformerEntityExtractor(ner_model_output_checkpoint),
         TransformationRelationLabeler(
             re_model_output_checkpoint,
-            relation_builder=RelationBuilder([
+            relation_builder=RelationBuilder(relation_formats=[
                 ('TEAM', 'QUANTITY', 'NO_RELATION')
             ]),
-        )
+        ),
+        additional_relation_labelers=[]
     )
 
     results = classifier.label(text)
 
-    for entity in results.entities:
-        print(entity)
+    entities, labels = results.totuple(exclude=['NO_RELATION'])
 
-    for relation_label in results.relation_labels:
-        print(relation_label)
+    print(entities)
 
-    print()
-    print()
-
-    for relation_label in filter(lambda a: a.label != 'NO_RELATION', results.relation_labels):
+    for relation_label in labels:
         print(relation_label)
         
 if __name__ == '__main__':
