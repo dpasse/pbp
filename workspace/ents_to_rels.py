@@ -35,7 +35,7 @@ class TransformerEntityExtractor(AbstractEntityExtractor):
 
         return entities
 
-class TransformationRelationLabeler(BaseRelationLabeler):
+class TransformerRelationLabeler(BaseRelationLabeler):
     def __init__(self,
                  model_output_checkpoint: str,
                  relation_builder: RelationBuilder,
@@ -76,7 +76,7 @@ def run():
 
     classifier = RelationClassification(
         TransformerEntityExtractor(ner_model_output_checkpoint),
-        TransformationRelationLabeler(
+        TransformerRelationLabeler(
             re_model_output_checkpoint,
             relation_builder=RelationBuilder(relation_formats=[
                 ('TEAM', 'QUANTITY', 'NO_RELATION')
