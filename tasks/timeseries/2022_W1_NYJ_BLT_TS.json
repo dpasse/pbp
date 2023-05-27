@@ -1,0 +1,3687 @@
+[
+  {
+    "event": 1,
+    "quarter": "1st Quarter",
+    "time": "15:00",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 35
+      },
+      {
+        "side": "NYJ",
+        "at": -3
+      },
+      {
+        "side": "NYJ",
+        "at": 22
+      }
+    ],
+    "info": [],
+    "events": [
+      "KO"
+    ],
+    "formations": [],
+    "players": [
+      "J.Tucker",
+      "B.Berrios",
+      "J.Ross"
+    ]
+  },
+  {
+    "event": 2,
+    "quarter": "1st Quarter",
+    "time": "14:55",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 41
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "M.Williams",
+      "C.Clark",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 2,
+    "quarter": "1st Quarter",
+    "time": "14:55",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 41
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 3,
+    "quarter": "1st Quarter",
+    "time": "14:18",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 46
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "NO HUDDLE",
+      "SHOTGUN"
+    ],
+    "players": [
+      "M.Harrison",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 4,
+    "quarter": "1st Quarter",
+    "time": "14:01",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 46
+      }
+    ],
+    "info": [
+      "PENALTY-NYJ"
+    ],
+    "events": [
+      "PENALTY"
+    ],
+    "formations": [
+      "NO HUDDLE",
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "C.Campbell"
+    ]
+  },
+  {
+    "event": 5,
+    "quarter": "1st Quarter",
+    "time": "13:52",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 19
+      },
+      {
+        "side": "BLT",
+        "at": 28
+      }
+    ],
+    "info": [],
+    "events": [
+      "PUNT"
+    ],
+    "formations": [],
+    "players": [
+      "D.Duvernay",
+      "B.Mann",
+      "T.Hennessy"
+    ]
+  },
+  {
+    "event": 6,
+    "quarter": "1st Quarter",
+    "time": "13:42",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 32
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "R.Bateman",
+      "J.Whitehead",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 7,
+    "quarter": "1st Quarter",
+    "time": "13:19",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 36
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "NO HUDDLE",
+      "SHOTGUN"
+    ],
+    "players": [
+      "D.Duvernay",
+      "C.Mosley",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 8,
+    "quarter": "1st Quarter",
+    "time": "12:41",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 40
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "C.Mosley",
+      "J.Whitehead",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 9,
+    "quarter": "1st Quarter",
+    "time": "12:01",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 40
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "K.Drake",
+      "Qu.Williams"
+    ]
+  },
+  {
+    "event": 10,
+    "quarter": "1st Quarter",
+    "time": "11:19",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 48
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "D.Reed",
+      "D.Duvernay",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 11,
+    "quarter": "1st Quarter",
+    "time": "10:17",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 49
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "K.Drake",
+      "C.Mosley",
+      "J.Martin"
+    ]
+  },
+  {
+    "event": 12,
+    "quarter": "1st Quarter",
+    "time": "9:56",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 49
+      }
+    ],
+    "info": [
+      "Timeout-BLT"
+    ],
+    "events": [
+      "TO"
+    ],
+    "formations": [],
+    "players": []
+  },
+  {
+    "event": 13,
+    "quarter": "1st Quarter",
+    "time": "9:55",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 11
+      }
+    ],
+    "info": [],
+    "events": [
+      "PUNT"
+    ],
+    "formations": [],
+    "players": [
+      "J.Stout",
+      "B.Berrios",
+      "N.Moore"
+    ]
+  },
+  {
+    "event": 14,
+    "quarter": "1st Quarter",
+    "time": "9:44",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 9
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "Br.Hall",
+      "J.Madubuike"
+    ]
+  },
+  {
+    "event": 15,
+    "quarter": "1st Quarter",
+    "time": "9:11",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 12
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "C.Clark",
+      "Br.Hall"
+    ]
+  },
+  {
+    "event": 16,
+    "quarter": "1st Quarter",
+    "time": "8:31",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 12
+      }
+    ],
+    "info": [
+      "PENALTY-BLT"
+    ],
+    "events": [
+      "PENALTY"
+    ],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "E.Moore",
+      "M.Humphrey",
+      "J.Flacco"
+    ]
+  },
+  {
+    "event": 17,
+    "quarter": "1st Quarter",
+    "time": "8:27",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 18
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "P.Queen",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 18,
+    "quarter": "1st Quarter",
+    "time": "7:50",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 18
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "M.Pierce",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 19,
+    "quarter": "1st Quarter",
+    "time": "7:16",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 18
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "C.Davis"
+    ]
+  },
+  {
+    "event": 20,
+    "quarter": "1st Quarter",
+    "time": "7:10",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 34
+      }
+    ],
+    "info": [],
+    "events": [
+      "PUNT"
+    ],
+    "formations": [],
+    "players": [
+      "D.Duvernay",
+      "B.Mann",
+      "T.Hennessy"
+    ]
+  },
+  {
+    "event": 21,
+    "quarter": "1st Quarter",
+    "time": "7:05",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 34
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "I.Likely",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 22,
+    "quarter": "1st Quarter",
+    "time": "7:01",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 35
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "M.Davis",
+      "M.Clemons",
+      "C.Mosley"
+    ]
+  },
+  {
+    "event": 23,
+    "quarter": "1st Quarter",
+    "time": "6:12",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 35
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "I.Likely",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 24,
+    "quarter": "1st Quarter",
+    "time": "6:08",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 17
+      }
+    ],
+    "info": [],
+    "events": [
+      "PUNT"
+    ],
+    "formations": [],
+    "players": [
+      "J.Stout",
+      "B.Berrios",
+      "N.Moore"
+    ]
+  },
+  {
+    "event": 25,
+    "quarter": "1st Quarter",
+    "time": "6:01",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 41
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "E.Moore",
+      "M.Williams",
+      "J.Flacco"
+    ]
+  },
+  {
+    "event": 26,
+    "quarter": "1st Quarter",
+    "time": "5:21",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 44
+      },
+      {
+        "side": "NYJ",
+        "at": 42
+      }
+    ],
+    "info": [
+      "PENALTY-NYJ"
+    ],
+    "events": [
+      "PENALTY"
+    ],
+    "formations": [],
+    "players": [
+      "L.Cager",
+      "M.Harrison",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 27,
+    "quarter": "1st Quarter",
+    "time": "4:56",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 46
+      },
+      {
+        "side": "NYJ",
+        "at": 13
+      }
+    ],
+    "info": [
+      "INTERCEPTED-M.Williams"
+    ],
+    "events": [
+      "INT"
+    ],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "M.Williams",
+      "L.Cager"
+    ]
+  },
+  {
+    "event": 28,
+    "quarter": "1st Quarter",
+    "time": "4:55",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 14
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "K.Drake",
+      "C.Lawson"
+    ]
+  },
+  {
+    "event": 29,
+    "quarter": "1st Quarter",
+    "time": "4:08",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 6
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "D.Robinson",
+      "J.Whitehead",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 30,
+    "quarter": "1st Quarter",
+    "time": "3:23",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 6
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "Q.Williams",
+      "I.Likely",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 31,
+    "quarter": "1st Quarter",
+    "time": "3:16",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 6
+      }
+    ],
+    "info": [],
+    "events": [
+      "FG"
+    ],
+    "formations": [],
+    "players": [
+      "J.Stout",
+      "N.Moore",
+      "J.Tucker"
+    ]
+  },
+  {
+    "event": 31,
+    "quarter": "1st Quarter",
+    "time": "3:16",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 35
+      }
+    ],
+    "info": [],
+    "events": [
+      "KO"
+    ],
+    "formations": [],
+    "players": [
+      "J.Tucker"
+    ]
+  },
+  {
+    "event": 31,
+    "quarter": "1st Quarter",
+    "time": "3:16",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 35
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "J.Flacco",
+      "J.Houston",
+      "Br.Hall"
+    ]
+  },
+  {
+    "event": 32,
+    "quarter": "1st Quarter",
+    "time": "3:11",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 35
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "J.Flacco",
+      "Br.Hall"
+    ]
+  },
+  {
+    "event": 33,
+    "quarter": "1st Quarter",
+    "time": "3:06",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 34
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "P.Queen",
+      "G.Wilson",
+      "C.Campbell",
+      "O.Oweh",
+      "J.Flacco"
+    ]
+  },
+  {
+    "event": 34,
+    "quarter": "1st Quarter",
+    "time": "2:00",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 16
+      }
+    ],
+    "info": [],
+    "events": [
+      "PUNT"
+    ],
+    "formations": [],
+    "players": [
+      "D.Duvernay",
+      "B.Mann",
+      "T.Hennessy"
+    ]
+  },
+  {
+    "event": 35,
+    "quarter": "1st Quarter",
+    "time": "1:53",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 27
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "D.Robinson",
+      "L.Jackson",
+      "A.Gardner"
+    ]
+  },
+  {
+    "event": 36,
+    "quarter": "1st Quarter",
+    "time": "1:12",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 29
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Hill",
+      "K.Alexander",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 37,
+    "quarter": "1st Quarter",
+    "time": "0:25",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 32
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "K.Drake",
+      "J.Johnson"
+    ]
+  },
+  {
+    "event": 38,
+    "quarter": "1st Quarter",
+    "time": "0:00",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 32
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": []
+  },
+  {
+    "event": 39,
+    "quarter": "2nd Quarter",
+    "time": "15:00",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 32
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "R.Bateman",
+      "J.Whitehead",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 40,
+    "quarter": "2nd Quarter",
+    "time": "14:55",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 12
+      },
+      {
+        "side": "NYJ",
+        "at": 29
+      }
+    ],
+    "info": [],
+    "events": [
+      "PUNT"
+    ],
+    "formations": [],
+    "players": [
+      "J.Stout",
+      "B.Berrios",
+      "N.Moore",
+      "D.Phillips"
+    ]
+  },
+  {
+    "event": 41,
+    "quarter": "2nd Quarter",
+    "time": "14:45",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 44
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "J.Flacco",
+      "M.Humphrey",
+      "M.Williams",
+      "C.Davis"
+    ]
+  },
+  {
+    "event": 42,
+    "quarter": "2nd Quarter",
+    "time": "14:18",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 45
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "M.Harrison",
+      "P.Queen",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 43,
+    "quarter": "2nd Quarter",
+    "time": "13:36",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 41
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "M.Humphrey",
+      "Br.Hall",
+      "J.Madubuike"
+    ]
+  },
+  {
+    "event": 44,
+    "quarter": "2nd Quarter",
+    "time": "13:00",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 33
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "J.Houston",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 45,
+    "quarter": "2nd Quarter",
+    "time": "12:19",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 33
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "C.Campbell",
+      "Br.Hall",
+      "J.Madubuike"
+    ]
+  },
+  {
+    "event": 46,
+    "quarter": "2nd Quarter",
+    "time": "11:39",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 27
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "P.Queen",
+      "B.Berrios"
+    ]
+  },
+  {
+    "event": 47,
+    "quarter": "2nd Quarter",
+    "time": "11:00",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 27
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "E.Moore",
+      "B.Stephens",
+      "J.Flacco"
+    ]
+  },
+  {
+    "event": 48,
+    "quarter": "2nd Quarter",
+    "time": "10:54",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 27
+      }
+    ],
+    "info": [],
+    "events": [
+      "NEGATED: FG"
+    ],
+    "formations": [],
+    "players": [
+      "G.Zuerlein",
+      "B.Mann",
+      "T.Hennessy"
+    ]
+  },
+  {
+    "event": 49,
+    "quarter": "2nd Quarter",
+    "time": "10:51",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 40
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "M.Andrews",
+      "J.Whitehead",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 50,
+    "quarter": "2nd Quarter",
+    "time": "10:17",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 49
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "M.Andrews",
+      "L.Jackson",
+      "Qu.Williams"
+    ]
+  },
+  {
+    "event": 51,
+    "quarter": "2nd Quarter",
+    "time": "9:42",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 49
+      }
+    ],
+    "info": [],
+    "events": [
+      "SACKED"
+    ],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "L.Jackson",
+      "Qu.Williams"
+    ]
+  },
+  {
+    "event": 52,
+    "quarter": "2nd Quarter",
+    "time": "8:59",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 49
+      }
+    ],
+    "info": [],
+    "events": [
+      "SACKED"
+    ],
+    "formations": [],
+    "players": [
+      "J.Johnson",
+      "J.Martin",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 53,
+    "quarter": "2nd Quarter",
+    "time": "8:15",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 49
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "R.Bateman",
+      "L.Jackson",
+      "C.Lawson"
+    ]
+  },
+  {
+    "event": 54,
+    "quarter": "2nd Quarter",
+    "time": "8:07",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 11
+      }
+    ],
+    "info": [],
+    "events": [
+      "PUNT"
+    ],
+    "formations": [],
+    "players": [
+      "J.Stout",
+      "B.Berrios",
+      "N.Moore"
+    ]
+  },
+  {
+    "event": 55,
+    "quarter": "2nd Quarter",
+    "time": "8:01",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 25
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "K.Fuller",
+      "Br.Hall"
+    ]
+  },
+  {
+    "event": 55,
+    "quarter": "2nd Quarter",
+    "time": "8:01",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 30
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "J.Flacco",
+      "M.Harrison",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 56,
+    "quarter": "2nd Quarter",
+    "time": "6:53",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 36
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "P.Queen",
+      "Br.Hall"
+    ]
+  },
+  {
+    "event": 57,
+    "quarter": "2nd Quarter",
+    "time": "6:17",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 30
+      }
+    ],
+    "info": [],
+    "events": [
+      "SACKED"
+    ],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "J.Houston"
+    ]
+  },
+  {
+    "event": 58,
+    "quarter": "2nd Quarter",
+    "time": "5:31",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 29
+      }
+    ],
+    "info": [],
+    "events": [
+      "SACKED"
+    ],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "C.Campbell",
+      "J.Flacco"
+    ]
+  },
+  {
+    "event": 59,
+    "quarter": "2nd Quarter",
+    "time": "4:55",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 29
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "T.Conklin"
+    ]
+  },
+  {
+    "event": 60,
+    "quarter": "2nd Quarter",
+    "time": "4:49",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 30
+      },
+      {
+        "side": "BLT",
+        "at": 38
+      }
+    ],
+    "info": [],
+    "events": [
+      "PUNT"
+    ],
+    "formations": [],
+    "players": [
+      "D.Duvernay",
+      "J.Hardee",
+      "B.Mann",
+      "T.Hennessy"
+    ]
+  },
+  {
+    "event": 61,
+    "quarter": "2nd Quarter",
+    "time": "4:41",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 38
+      }
+    ],
+    "info": [
+      "PENALTY-NYJ"
+    ],
+    "events": [
+      "PENALTY"
+    ],
+    "formations": [],
+    "players": [
+      "D.Robinson",
+      "L.Jackson",
+      "L.Joyner"
+    ]
+  },
+  {
+    "event": 62,
+    "quarter": "2nd Quarter",
+    "time": "4:35",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 38
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "M.Andrews",
+      "L.Jackson",
+      "A.Gardner"
+    ]
+  },
+  {
+    "event": 63,
+    "quarter": "2nd Quarter",
+    "time": "4:29",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 25
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.James",
+      "J.Hill",
+      "C.Mosley",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 64,
+    "quarter": "2nd Quarter",
+    "time": "3:45",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 25
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "J.Stout",
+      "N.Moore",
+      "J.Tucker"
+    ]
+  },
+  {
+    "event": 64,
+    "quarter": "2nd Quarter",
+    "time": "3:45",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 35
+      }
+    ],
+    "info": [],
+    "events": [
+      "KO"
+    ],
+    "formations": [],
+    "players": [
+      "J.Tucker"
+    ]
+  },
+  {
+    "event": 65,
+    "quarter": "2nd Quarter",
+    "time": "3:40",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 30
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "J.Bynes",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 66,
+    "quarter": "2nd Quarter",
+    "time": "3:14",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 48
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "S.Means",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 67,
+    "quarter": "2nd Quarter",
+    "time": "2:34",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 45
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "P.Queen",
+      "B.Berrios"
+    ]
+  },
+  {
+    "event": 68,
+    "quarter": "2nd Quarter",
+    "time": "2:00",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 45
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": []
+  },
+  {
+    "event": 68,
+    "quarter": "2nd Quarter",
+    "time": "2:00",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 32
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "M.Williams",
+      "B.Berrios"
+    ]
+  },
+  {
+    "event": 69,
+    "quarter": "2nd Quarter",
+    "time": "1:26",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 27
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "C.Campbell",
+      "Br.Hall"
+    ]
+  },
+  {
+    "event": 70,
+    "quarter": "2nd Quarter",
+    "time": "1:20",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 27
+      }
+    ],
+    "info": [
+      "Timeout-BLT"
+    ],
+    "events": [
+      "TO"
+    ],
+    "formations": [],
+    "players": []
+  },
+  {
+    "event": 70,
+    "quarter": "2nd Quarter",
+    "time": "1:20",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 27
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Houston",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 71,
+    "quarter": "2nd Quarter",
+    "time": "1:16",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 27
+      }
+    ],
+    "info": [
+      "Timeout-BLT"
+    ],
+    "events": [
+      "TO"
+    ],
+    "formations": [],
+    "players": []
+  },
+  {
+    "event": 72,
+    "quarter": "2nd Quarter",
+    "time": "1:15",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 21
+      },
+      {
+        "side": "BLT",
+        "at": 28
+      },
+      {
+        "side": "BLT",
+        "at": 27
+      }
+    ],
+    "info": [],
+    "events": [
+      "FUM"
+    ],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "M.Pierce",
+      "G.Wilson",
+      "K.Hamilton",
+      "M.Williams",
+      "J.Flacco",
+      "T.Conklin"
+    ]
+  },
+  {
+    "event": 73,
+    "quarter": "2nd Quarter",
+    "time": "0:24",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 21
+      },
+      {
+        "side": "BLT",
+        "at": 28
+      },
+      {
+        "side": "BLT",
+        "at": 27
+      }
+    ],
+    "info": [],
+    "events": [
+      "FG"
+    ],
+    "formations": [],
+    "players": [
+      "G.Zuerlein",
+      "B.Mann",
+      "T.Hennessy"
+    ]
+  },
+  {
+    "event": 73,
+    "quarter": "2nd Quarter",
+    "time": "0:24",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 35
+      }
+    ],
+    "info": [],
+    "events": [
+      "KO"
+    ],
+    "formations": [],
+    "players": [
+      "G.Zuerlein"
+    ]
+  },
+  {
+    "event": 73,
+    "quarter": "2nd Quarter",
+    "time": "0:24",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 35
+      }
+    ],
+    "info": [
+      "Timeout-NYJ"
+    ],
+    "events": [
+      "TO"
+    ],
+    "formations": [],
+    "players": []
+  },
+  {
+    "event": 74,
+    "quarter": "2nd Quarter",
+    "time": "0:23",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 28
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Hill",
+      "M.Carter",
+      "C.Lawson"
+    ]
+  },
+  {
+    "event": 75,
+    "quarter": "2nd Quarter",
+    "time": "0:00",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 28
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": []
+  },
+  {
+    "event": 76,
+    "quarter": "3rd Quarter",
+    "time": "15:00",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 35
+      }
+    ],
+    "info": [],
+    "events": [
+      "KO"
+    ],
+    "formations": [],
+    "players": [
+      "G.Zuerlein"
+    ]
+  },
+  {
+    "event": 77,
+    "quarter": "3rd Quarter",
+    "time": "14:59",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 27
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "K.Drake",
+      "J.Franklin",
+      "C.Mosley"
+    ]
+  },
+  {
+    "event": 78,
+    "quarter": "3rd Quarter",
+    "time": "14:21",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 27
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "L.Jackson",
+      "C.Lawson"
+    ]
+  },
+  {
+    "event": 79,
+    "quarter": "3rd Quarter",
+    "time": "14:15",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 35
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Whitehead",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 80,
+    "quarter": "3rd Quarter",
+    "time": "13:32",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 36
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "J.Hill",
+      "K.Alexander",
+      "J.Martin"
+    ]
+  },
+  {
+    "event": 81,
+    "quarter": "3rd Quarter",
+    "time": "12:58",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 36
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "M.Andrews",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 82,
+    "quarter": "3rd Quarter",
+    "time": "12:50",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 36
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "R.Bateman",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 83,
+    "quarter": "3rd Quarter",
+    "time": "12:44",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 36
+      }
+    ],
+    "info": [],
+    "events": [
+      "PUNT"
+    ],
+    "formations": [],
+    "players": [
+      "J.Stout",
+      "N.Moore"
+    ]
+  },
+  {
+    "event": 84,
+    "quarter": "3rd Quarter",
+    "time": "12:37",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 15
+      }
+    ],
+    "info": [],
+    "events": [
+      "SACKED"
+    ],
+    "formations": [],
+    "players": [
+      "J.Flacco",
+      "P.Queen",
+      "J.Madubuike"
+    ]
+  },
+  {
+    "event": 85,
+    "quarter": "3rd Quarter",
+    "time": "11:55",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 15
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "Mi.Carter",
+      "J.Madubuike"
+    ]
+  },
+  {
+    "event": 86,
+    "quarter": "3rd Quarter",
+    "time": "11:16",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 24
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "M.Humphrey",
+      "C.Clark",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 87,
+    "quarter": "3rd Quarter",
+    "time": "10:30",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 44
+      }
+    ],
+    "info": [],
+    "events": [
+      "PUNT"
+    ],
+    "formations": [],
+    "players": [
+      "B.Mann",
+      "T.Hennessy"
+    ]
+  },
+  {
+    "event": 88,
+    "quarter": "3rd Quarter",
+    "time": "10:24",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 29
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "K.Drake",
+      "L.Jackson",
+      "L.Joyner"
+    ]
+  },
+  {
+    "event": 89,
+    "quarter": "3rd Quarter",
+    "time": "9:48",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 23
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "L.Jackson",
+      "Qu.Williams"
+    ]
+  },
+  {
+    "event": 90,
+    "quarter": "3rd Quarter",
+    "time": "9:13",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 17
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "K.Drake",
+      "C.Mosley"
+    ]
+  },
+  {
+    "event": 91,
+    "quarter": "3rd Quarter",
+    "time": "8:29",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 18
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "K.Drake",
+      "M.Carter"
+    ]
+  },
+  {
+    "event": 92,
+    "quarter": "3rd Quarter",
+    "time": "8:03",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 17
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Franklin",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 93,
+    "quarter": "3rd Quarter",
+    "time": "7:14",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 17
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "J.Stout",
+      "N.Moore",
+      "J.Tucker"
+    ]
+  },
+  {
+    "event": 93,
+    "quarter": "3rd Quarter",
+    "time": "7:14",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 35
+      }
+    ],
+    "info": [],
+    "events": [
+      "KO"
+    ],
+    "formations": [],
+    "players": [
+      "J.Tucker"
+    ]
+  },
+  {
+    "event": 93,
+    "quarter": "3rd Quarter",
+    "time": "7:14",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 26
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "M.Pierce",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 94,
+    "quarter": "3rd Quarter",
+    "time": "6:38",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 26
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "E.Moore",
+      "J.Flacco"
+    ]
+  },
+  {
+    "event": 95,
+    "quarter": "3rd Quarter",
+    "time": "6:30",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 20
+      },
+      {
+        "side": "NYJ",
+        "at": 26
+      }
+    ],
+    "info": [
+      "PENALTY-BLT"
+    ],
+    "events": [
+      "SACKED",
+      "PENALTY"
+    ],
+    "formations": [
+      "NO HUDDLE",
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "B.Stephens",
+      "J.Madubuike"
+    ]
+  },
+  {
+    "event": 96,
+    "quarter": "3rd Quarter",
+    "time": "6:05",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 33
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "M.Harrison",
+      "Br.Hall"
+    ]
+  },
+  {
+    "event": 97,
+    "quarter": "3rd Quarter",
+    "time": "5:31",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 39
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "M.Humphrey",
+      "C.Clark",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 98,
+    "quarter": "3rd Quarter",
+    "time": "4:54",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 39
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "C.Davis",
+      "P.Queen"
+    ]
+  },
+  {
+    "event": 99,
+    "quarter": "3rd Quarter",
+    "time": "4:48",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 12
+      }
+    ],
+    "info": [],
+    "events": [
+      "PUNT"
+    ],
+    "formations": [],
+    "players": [
+      "B.Echols",
+      "B.Mann",
+      "T.Hennessy"
+    ]
+  },
+  {
+    "event": 100,
+    "quarter": "3rd Quarter",
+    "time": "4:37",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 12
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "D.Robinson",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 101,
+    "quarter": "3rd Quarter",
+    "time": "4:34",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 27
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "M.Andrews",
+      "C.Mosley",
+      "L.Jackson",
+      "Qu.Williams"
+    ]
+  },
+  {
+    "event": 102,
+    "quarter": "3rd Quarter",
+    "time": "3:51",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 35
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "K.Drake",
+      "C.Mosley"
+    ]
+  },
+  {
+    "event": 103,
+    "quarter": "3rd Quarter",
+    "time": "3:11",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 43
+      },
+      {
+        "side": "BLT",
+        "at": 45
+      }
+    ],
+    "info": [],
+    "events": [
+      "FUM"
+    ],
+    "formations": [],
+    "players": [
+      "D.Reed",
+      "M.Davis"
+    ]
+  },
+  {
+    "event": 104,
+    "quarter": "3rd Quarter",
+    "time": "2:06",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 43
+      },
+      {
+        "side": "BLT",
+        "at": 45
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "J.Stout",
+      "N.Moore",
+      "J.Tucker"
+    ]
+  },
+  {
+    "event": 105,
+    "quarter": "3rd Quarter",
+    "time": "1:32",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 35
+      },
+      {
+        "side": "NYJ",
+        "at": -5
+      },
+      {
+        "side": "NYJ",
+        "at": 18
+      },
+      {
+        "side": "NYJ",
+        "at": 18
+      }
+    ],
+    "info": [
+      "PENALTY-NYJ"
+    ],
+    "events": [
+      "KO",
+      "PENALTY"
+    ],
+    "formations": [],
+    "players": [
+      "J.Armour",
+      "B.Berrios",
+      "J.Tucker",
+      "J.Martin"
+    ]
+  },
+  {
+    "event": 106,
+    "quarter": "3rd Quarter",
+    "time": "1:03",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 36
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "M.Williams",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 107,
+    "quarter": "3rd Quarter",
+    "time": "1:00",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 26
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "J.Flacco",
+      "M.Humphrey",
+      "C.Davis",
+      "C.Clark"
+    ]
+  },
+  {
+    "event": 107,
+    "quarter": "3rd Quarter",
+    "time": "1:00",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 34
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "E.Moore",
+      "M.Humphrey",
+      "J.Flacco"
+    ]
+  },
+  {
+    "event": 108,
+    "quarter": "3rd Quarter",
+    "time": "0:36",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 34
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "NO HUDDLE"
+    ],
+    "players": [
+      "J.Flacco",
+      "Br.Hall"
+    ]
+  },
+  {
+    "event": 109,
+    "quarter": "3rd Quarter",
+    "time": "0:32",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 48
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "J.Flacco",
+      "J.Armour",
+      "C.Davis",
+      "M.Williams"
+    ]
+  },
+  {
+    "event": 110,
+    "quarter": "3rd Quarter",
+    "time": "0:05",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 40
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "B.Berrios"
+    ]
+  },
+  {
+    "event": 111,
+    "quarter": "3rd Quarter",
+    "time": "0:00",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 40
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": []
+  },
+  {
+    "event": 112,
+    "quarter": "4th Quarter",
+    "time": "15:00",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 25
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "M.Williams",
+      "G.Wilson"
+    ]
+  },
+  {
+    "event": 113,
+    "quarter": "4th Quarter",
+    "time": "14:33",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 22
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "NO HUDDLE",
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "M.Humphrey",
+      "B.Berrios"
+    ]
+  },
+  {
+    "event": 114,
+    "quarter": "4th Quarter",
+    "time": "14:10",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 16
+      },
+      {
+        "side": "BLT",
+        "at": 15
+      }
+    ],
+    "info": [
+      "RECOVERED-BLT"
+    ],
+    "events": [
+      "FR",
+      "FUM"
+    ],
+    "formations": [
+      "NO HUDDLE",
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "M.Humphrey",
+      "C.Clark",
+      "Br.Hall"
+    ]
+  },
+  {
+    "event": 115,
+    "quarter": "4th Quarter",
+    "time": "14:03",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 23
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "K.Drake",
+      "Qu.Williams"
+    ]
+  },
+  {
+    "event": 116,
+    "quarter": "4th Quarter",
+    "time": "13:17",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 28
+      },
+      {
+        "side": "BLT",
+        "at": 23
+      }
+    ],
+    "info": [
+      "PENALTY-BLT"
+    ],
+    "events": [
+      "PENALTY"
+    ],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "I.Likely",
+      "C.Mosley",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 117,
+    "quarter": "4th Quarter",
+    "time": "12:48",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 17
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "M.Andrews",
+      "M.Carter",
+      "C.Mosley",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 118,
+    "quarter": "4th Quarter",
+    "time": "12:01",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 34
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "M.Andrews",
+      "M.Carter",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 119,
+    "quarter": "4th Quarter",
+    "time": "11:13",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 38
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "K.Drake",
+      "S.Thomas",
+      "A.Gardner"
+    ]
+  },
+  {
+    "event": 120,
+    "quarter": "4th Quarter",
+    "time": "10:25",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 38
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "T.Wallace",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 121,
+    "quarter": "4th Quarter",
+    "time": "10:18",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 38
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "I.Likely",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 122,
+    "quarter": "4th Quarter",
+    "time": "10:14",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 19
+      },
+      {
+        "side": "NYJ",
+        "at": 32
+      }
+    ],
+    "info": [],
+    "events": [
+      "PUNT"
+    ],
+    "formations": [],
+    "players": [
+      "J.Stout",
+      "G.Stone",
+      "N.Moore",
+      "B.Berrios",
+      "Da.Williams"
+    ]
+  },
+  {
+    "event": 123,
+    "quarter": "4th Quarter",
+    "time": "10:05",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 49
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "M.Williams",
+      "C.Davis"
+    ]
+  },
+  {
+    "event": 124,
+    "quarter": "4th Quarter",
+    "time": "9:43",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 49
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "NO HUDDLE",
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "T.Conklin"
+    ]
+  },
+  {
+    "event": 125,
+    "quarter": "4th Quarter",
+    "time": "9:41",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 45
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "M.Williams",
+      "C.Clark",
+      "T.Conklin"
+    ]
+  },
+  {
+    "event": 126,
+    "quarter": "4th Quarter",
+    "time": "9:05",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 37
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "E.Moore",
+      "B.Stephens",
+      "J.Flacco"
+    ]
+  },
+  {
+    "event": 127,
+    "quarter": "4th Quarter",
+    "time": "8:44",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 37
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "NO HUDDLE",
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "B.Washington",
+      "T.Conklin"
+    ]
+  },
+  {
+    "event": 128,
+    "quarter": "4th Quarter",
+    "time": "8:39",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 28
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "M.Williams",
+      "G.Wilson"
+    ]
+  },
+  {
+    "event": 129,
+    "quarter": "4th Quarter",
+    "time": "8:10",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 28
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "NO HUDDLE"
+    ],
+    "players": [
+      "J.Flacco",
+      "C.Clark"
+    ]
+  },
+  {
+    "event": 129,
+    "quarter": "4th Quarter",
+    "time": "8:10",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 21
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "K.Fuller",
+      "C.Davis",
+      "J.Flacco"
+    ]
+  },
+  {
+    "event": 130,
+    "quarter": "4th Quarter",
+    "time": "7:06",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 21
+      },
+      {
+        "side": "BLT",
+        "at": 21
+      }
+    ],
+    "info": [
+      "PENALTY-NYJ"
+    ],
+    "events": [
+      "PENALTY"
+    ],
+    "formations": [
+      "NO HUDDLE",
+      "SHOTGUN"
+    ],
+    "players": [
+      "M.Harrison",
+      "S.Means",
+      "G.Fant",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 131,
+    "quarter": "4th Quarter",
+    "time": "6:57",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 22
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "B.Stephens",
+      "C.Davis"
+    ]
+  },
+  {
+    "event": 132,
+    "quarter": "4th Quarter",
+    "time": "6:33",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 17
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "NO HUDDLE",
+      "SHOTGUN"
+    ],
+    "players": [
+      "K.Hamilton",
+      "J.Flacco",
+      "T.Conklin"
+    ]
+  },
+  {
+    "event": 133,
+    "quarter": "4th Quarter",
+    "time": "5:59",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 14
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "P.Queen",
+      "Br.Hall"
+    ]
+  },
+  {
+    "event": 134,
+    "quarter": "4th Quarter",
+    "time": "5:17",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 10
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "K.Fuller",
+      "E.Moore",
+      "J.Flacco"
+    ]
+  },
+  {
+    "event": 135,
+    "quarter": "4th Quarter",
+    "time": "4:53",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 10
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "NO HUDDLE",
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "B.Stephens",
+      "G.Wilson"
+    ]
+  },
+  {
+    "event": 136,
+    "quarter": "4th Quarter",
+    "time": "4:49",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 6
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "C.Clark",
+      "Br.Hall"
+    ]
+  },
+  {
+    "event": 137,
+    "quarter": "4th Quarter",
+    "time": "4:28",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 6
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "NO HUDDLE",
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco"
+    ]
+  },
+  {
+    "event": 138,
+    "quarter": "4th Quarter",
+    "time": "4:21",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 6
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 139,
+    "quarter": "4th Quarter",
+    "time": "4:16",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 19
+      },
+      {
+        "side": "BLT",
+        "at": 7
+      }
+    ],
+    "info": [
+      "PENALTY-BLT"
+    ],
+    "events": [
+      "PENALTY"
+    ],
+    "formations": [],
+    "players": [
+      "K.Drake",
+      "J.Whitehead",
+      "J.Proche",
+      "C.Mosley"
+    ]
+  },
+  {
+    "event": 140,
+    "quarter": "4th Quarter",
+    "time": "4:11",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 19
+      },
+      {
+        "side": "BLT",
+        "at": 7
+      }
+    ],
+    "info": [
+      "Timeout-BLT"
+    ],
+    "events": [
+      "TO"
+    ],
+    "formations": [],
+    "players": []
+  },
+  {
+    "event": 141,
+    "quarter": "4th Quarter",
+    "time": "4:09",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 10
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "P.Ricard",
+      "K.Alexander",
+      "C.Mosley",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 142,
+    "quarter": "4th Quarter",
+    "time": "3:30",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 11
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "K.Drake",
+      "M.Clemons",
+      "S.Rankins"
+    ]
+  },
+  {
+    "event": 143,
+    "quarter": "4th Quarter",
+    "time": "2:49",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 43
+      },
+      {
+        "side": "BLT",
+        "at": 43
+      }
+    ],
+    "info": [
+      "INTERCEPTED-D.Reed"
+    ],
+    "events": [
+      "INT"
+    ],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "D.Reed",
+      "D.Robinson",
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 144,
+    "quarter": "4th Quarter",
+    "time": "2:41",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 43
+      },
+      {
+        "side": "BLT",
+        "at": 43
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "B.Washington",
+      "Br.Hall"
+    ]
+  },
+  {
+    "event": 145,
+    "quarter": "4th Quarter",
+    "time": "2:36",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 27
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "O.Oweh",
+      "J.Flacco",
+      "Br.Hall"
+    ]
+  },
+  {
+    "event": 146,
+    "quarter": "4th Quarter",
+    "time": "2:25",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 22
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "NO HUDDLE",
+      "SHOTGUN"
+    ],
+    "players": [
+      "E.Moore",
+      "M.Humphrey",
+      "J.Flacco"
+    ]
+  },
+  {
+    "event": 147,
+    "quarter": "4th Quarter",
+    "time": "2:11",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 22
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "NO HUDDLE",
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "G.Wilson"
+    ]
+  },
+  {
+    "event": 148,
+    "quarter": "4th Quarter",
+    "time": "2:06",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 31
+      },
+      {
+        "side": "BLT",
+        "at": 22
+      }
+    ],
+    "info": [
+      "PENALTY-BLT"
+    ],
+    "events": [
+      "SACKED",
+      "PENALTY"
+    ],
+    "formations": [],
+    "players": [
+      "K.Fuller",
+      "B.Washington",
+      "J.Flacco"
+    ]
+  },
+  {
+    "event": 149,
+    "quarter": "4th Quarter",
+    "time": "2:00",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 31
+      },
+      {
+        "side": "BLT",
+        "at": 22
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": []
+  },
+  {
+    "event": 150,
+    "quarter": "4th Quarter",
+    "time": "1:59",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 12
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "M.Williams",
+      "P.Queen",
+      "Mi.Carter"
+    ]
+  },
+  {
+    "event": 151,
+    "quarter": "4th Quarter",
+    "time": "1:38",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 12
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "NO HUDDLE",
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "C.Davis"
+    ]
+  },
+  {
+    "event": 152,
+    "quarter": "4th Quarter",
+    "time": "1:32",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 12
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "M.Pierce",
+      "B.Berrios"
+    ]
+  },
+  {
+    "event": 153,
+    "quarter": "4th Quarter",
+    "time": "1:21",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 12
+      }
+    ],
+    "info": [
+      "PENALTY-NYJ"
+    ],
+    "events": [
+      "NEGATED: TD",
+      "PENALTY"
+    ],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "E.Moore",
+      "K.Fuller",
+      "J.Flacco"
+    ]
+  },
+  {
+    "event": 154,
+    "quarter": "4th Quarter",
+    "time": "1:17",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 3
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "K.Hamilton",
+      "G.Wilson",
+      "J.Flacco"
+    ]
+  },
+  {
+    "event": 155,
+    "quarter": "4th Quarter",
+    "time": "1:10",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 3
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "G.Wilson"
+    ]
+  },
+  {
+    "event": 156,
+    "quarter": "4th Quarter",
+    "time": "1:07",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 3
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [
+      "SHOTGUN"
+    ],
+    "players": [
+      "J.Flacco",
+      "G.Wilson"
+    ]
+  },
+  {
+    "event": 157,
+    "quarter": "4th Quarter",
+    "time": "1:00",
+    "spots": [
+      {
+        "side": "BLT",
+        "at": 3
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": []
+  },
+  {
+    "event": 158,
+    "quarter": "4th Quarter",
+    "time": "0:59",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 35
+      },
+      {
+        "side": "NYJ",
+        "at": 42
+      },
+      {
+        "side": "NYJ",
+        "at": 42
+      }
+    ],
+    "info": [],
+    "events": [
+      "KO"
+    ],
+    "formations": [],
+    "players": [
+      "K.Welch",
+      "B.Mann"
+    ]
+  },
+  {
+    "event": 159,
+    "quarter": "4th Quarter",
+    "time": "0:37",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 43
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 160,
+    "quarter": "4th Quarter",
+    "time": "0:09",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 44
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": [
+      "L.Jackson"
+    ]
+  },
+  {
+    "event": 161,
+    "quarter": "4th Quarter",
+    "time": "0:00",
+    "spots": [
+      {
+        "side": "NYJ",
+        "at": 44
+      }
+    ],
+    "info": [],
+    "events": [],
+    "formations": [],
+    "players": []
+  }
+]
