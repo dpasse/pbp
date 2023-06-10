@@ -4,6 +4,9 @@ crf:
 ents:
 	python ./ents.py
 
+ents-ws:
+	python ./ents_ws.py
+
 rels:
 	python ./rels.py
 

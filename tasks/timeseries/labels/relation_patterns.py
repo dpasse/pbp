@@ -19,15 +19,6 @@ relation_patterns = [
             e2='QUANTITY',
         ) \
         .build(),
-    RegExRelationLabelBuilder('is_unit') \
-        .add_e1_to_e2(
-            e1='QUANTITY',
-            relation_expressions=[
-                r'\s+',
-            ],
-            e2='UNITS',
-        ) \
-        .build(),
     RegExRelationLabelBuilder('is_on') \
         .add_e1_to_e2(
             e1='EVENT',
