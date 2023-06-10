@@ -207,7 +207,8 @@ def pipeline_test():
             )
 
         iob = []
-        for grouping in Labeler(word_tokenizer).label(text, entities):
+        label = Labeler(word_tokenizer).label(text, entities)
+        for grouping in [label]:
             iob.append({
                 'tokens': [tk.text for tk in grouping.tokens],
                 'labels': grouping.labels,
